@@ -1,0 +1,69 @@
+html {
+    height: 100vh;
+    font-family: Baloo;
+}
+
+body {
+    padding: 10px;
+    background-image: linear-gradient(#5DA4D9, #A5A);
+}
+
+#emoji-container {
+    margin: 40px auto;
+    text-align: center;
+    
+    box-shadow: #000000 1px 1px 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+#emoji-container span {
+    margin: 10px;
+    font-size: 80px;
+    /* border: rgb(76, 72, 69) solid 1px; */
+    box-shadow: #5DA4D9 5px 5px 40px ;
+    
+}
+
+#push-btn, #unshift-btn {
+    background-color: #80D87F;
+}
+
+#shift-btn,#pop-btn {
+    background-color: #E23349;
+}
+
+h1 {
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(192, 76, 76);
+    text-shadow: #000000 0px 0px 7px;
+}
+
+input {
+    margin: 0 auto;
+    display: block;
+    border: none;
+    height: 30px;
+    background: white;
+    border-radius: 6px;
+    text-align: center;
+}
+
+button {
+    font-family: Baloo;
+    background: darkcyan;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 0 4px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px;
+
+}
+

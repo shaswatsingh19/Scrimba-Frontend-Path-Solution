@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+}
+
+/*
+
+Style our app according to the provided design!
+
+green color -> #5f9341
+
+*/
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;/*as above padding increase the width by 100 + 10 + 10 so we use box sizing so the the width doesn't overflow*/
+    border: 1px solid #5f9341;
+    margin-bottom: 4px;
+}
+
+button {
+    
+    padding: 10px 20px;
+    font-weight: bold;
+    background: #5f9341;
+    color: white;
+    border:solid 1px #5f9341;
+    margin:2px 2px;
+}
+#delete-btn{
+    background: white;
+    color: #5f9341;
+    border:solid 1px;
+
+}
+
+ul{
+    padding-left: 5px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+li{
+    margin-top: 15px;
+}
+
+a{
+    color :#5f9341;
+    font-size: 25px;
+}
+
+.select {background-color:green}
+                div {background-color:red;}
+                #select {background-color:blue;}
+                
