@@ -1,0 +1,126 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+:root{
+    --RED: #E63946;
+    --LIGHT: #F1FAEE;
+    --AQUA: #A8DADC;
+    --LIGHT-BLUE: #457B9D;
+    --DARK-BLUE: #1D3557;
+
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Saira', sans-serif;
+
+}
+
+img {
+    width: 100px;
+}
+#hero{
+    font-family: 'Happy Monkey', cursive;
+    border: 1px solid transparent;
+    margin: 0;
+    background-image: url('images/varanasi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+#hero h1{
+    
+    background-color: var(--DARK-BLUE);
+    margin: 20px auto;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+}
+#hero h2{
+    
+    margin: 0 auto;
+    background-color: var(--LIGHT-BLUE);
+    width: 65%;
+}
+
+h1,h2{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+img{
+    width: 200px;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all .81s;
+}
+.activity img:hover{
+    transform: scale(1.2);
+    box-shadow: none;
+    margin: 10px;
+}
+
+#main{
+    padding: 50px 0;
+    background-color: var(--LIGHT);
+    display: flex;
+    justify-content: space-around;
+    
+}
+.activity{
+    width: 30%;
+    padding: 8px;
+    margin: 0px 0 20px 0;
+}
+
+#footer{
+    border-radius: 10px;
+    background-color: var(--AQUA);
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 50px auto;
+    border-bottom: 10px solid black;
+}
+
+#footer img{
+    /* width: 180px; */
+    border-radius: 10px;
+    margin: 20px 10px;
+    box-shadow: none;
+    
+
+}
+
+@media screen and (max-width:700px) {
+    #main{
+        /* display: block; */
+        flex-direction: column;
+        padding: 40px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .activity{
+        width: 100%;
+    }
+    
+    #footer{
+        flex-direction: column
+    }
+    
+}
