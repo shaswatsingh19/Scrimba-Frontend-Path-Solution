@@ -1,0 +1,35 @@
+@font-face{
+      font-family: timerFont;
+      src: url(CursedTimerUlil-Aznm.ttf);
+}
+body {
+    margin: 0;
+    background: rebeccapurple;
+}
+.timer-font {
+    font-family: timerFont;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid red;
+    width: 70%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+.container div{
+    border: 1px solid violet
+}
+h1{
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 5px gray;
+}
+
+.home-score{
+    background-color: black;
+    color: red;
+    font-size: 5rem;
+    
+}
