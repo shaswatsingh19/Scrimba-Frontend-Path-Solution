@@ -36,11 +36,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-bg-color);
-    margin: 100px auto;
+    margin: 4% auto 0;
     border-radius: 10px;
     width: 460px;
     padding: 20px;
     color: var(--primary-text);
+    box-shadow: 0 0 20px var(--primary-text);
 }
 #header{
     margin: 10px auto 10px 0;
@@ -63,21 +64,22 @@ p{
     justify-content: space-between;
     /* align-items: flex-start; */
     display: grid;
-    grid-template: auto / auto auto auto;
+    grid-template: auto / 50% auto auto;
 }
 
 
 #password-length{
-    width: 200px;
+    width: 100%;
+    /* max-width: 200px; */
+    font-size: 12px;
 }
 input,button{
     font-weight: 700;
-    padding: 15px;
+    padding: 8px;
     font-size: 1.2rem;
 
 }
 input{
-    padding: 8px;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -108,22 +110,22 @@ button:active{
     border-radius: 10px;
     opacity: .4;
 }
-.password:nth-child(2n){
-    /* background-color: red; */
+/* .password:nth-child(2n){
     margin-left: 30px;
+} */
+#password-field{
+    text-align: center;
+
 }
 .password {
     background-color:rgb(34, 33, 33);
-    width: 45%;
-    height: 30px;
+    width: 100%;
+    height: 20px;
     border-radius: 4px;
     margin: 8px auto ;
-    display: inline-block;
-    text-align: center;
-    padding-top: 5px;
+    padding: 5px;
     font-size: 1.2rem;
     color: var(--secondary-text);
-    text-decoration: underline;
     cursor:pointer;
 }
 .password:hover{
@@ -132,33 +134,4 @@ button:active{
 .password:active{
     transform: scale(.95);
 }
-@media screen and (max-width:700px) {
-    
-    .password{
-        display: block;
-        width: 100%;
-        margin: 10px auto;
-        letter-spacing: 2px;
-    }
-    .password:nth-child(2n){
-        /* background-color: red; */
-        margin-left: 0
-    }
-    
-    #input-field{
-        display: grid;
-        grid-template: auto / auto auto auto;
-        justify-content: space-around;
-        gap: 10px;
 
-    }
-    
-    input,button{
-        font-weight:500;
-        padding: 10px;
-        font-size: 1.01rem;
-    
-    }
-    
-    
-}
