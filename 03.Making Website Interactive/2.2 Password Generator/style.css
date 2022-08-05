@@ -1,0 +1,164 @@
+:root{
+    --body-bg:#000;
+    --primary-bg-color : #1e1727;
+    --secondary-bg-color : rgb(71, 66, 59);
+    --primary-text:white;
+    --secondary-text:#34D399;
+    
+}
+
+.light-theme{
+    
+    --body-bg:rgb(200, 205, 195);
+    --primary-bg-color : #e8eae6;
+    --secondary-bg-color : rgb(255, 255, 255);
+    --primary-text :black
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    color: white;
+}
+
+#light-dark{
+    text-align: end;
+}
+#icon{
+    background-color: var(--secondary-bg-color);
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--primary-text);
+}
+
+#continer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    margin: 100px auto;
+    border-radius: 10px;
+    width: 460px;
+    padding: 20px;
+    color: var(--primary-text);
+}
+#header{
+    margin: 10px auto 10px 0;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    text-decoration: underline .01rem;
+}
+#para2{
+    color:var(--secondary-text);
+}
+p{
+    margin: 8px auto;
+    padding: 0;
+}
+
+#input-field{
+    /* display: flex; */
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    display: grid;
+    grid-template: auto / auto auto auto;
+}
+
+
+#password-length{
+    width: 200px;
+}
+input,button{
+    font-weight: 700;
+    padding: 15px;
+    font-size: 1.2rem;
+
+}
+input{
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+button{
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    transition: all .8s;
+}
+button:active{
+    transform: scale(.95);
+}
+.button-active{
+    color: var(--primary-text);
+    background-color: var(--secondary-text);
+}
+
+#generate-btn{
+    color: var(--primary-text);
+    background-color: var(--secondary-text);
+    text-align: center;
+}
+#line-break{
+    margin: 20px auto;
+    background-color: var(--primary-text);
+    width: 90%;
+    height: 1px;
+    border-radius: 10px;
+    opacity: .4;
+}
+.password:nth-child(2n){
+    /* background-color: red; */
+    margin-left: 30px;
+}
+.password {
+    background-color:rgb(34, 33, 33);
+    width: 45%;
+    height: 30px;
+    border-radius: 4px;
+    margin: 8px auto ;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    text-decoration: underline;
+    cursor:pointer;
+}
+.password:hover{
+    text-shadow:0 0 4px #a39c9c;
+}
+.password:active{
+    transform: scale(.95);
+}
+@media screen and (max-width:700px) {
+    
+    .password{
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+        letter-spacing: 2px;
+    }
+    .password:nth-child(2n){
+        /* background-color: red; */
+        margin-left: 0
+    }
+    
+    #input-field{
+        display: grid;
+        grid-template: auto / auto auto auto;
+        justify-content: space-around;
+        gap: 10px;
+
+    }
+    
+    input,button{
+        font-weight:500;
+        padding: 10px;
+        font-size: 1.01rem;
+    
+    }
+    
+    
+}
