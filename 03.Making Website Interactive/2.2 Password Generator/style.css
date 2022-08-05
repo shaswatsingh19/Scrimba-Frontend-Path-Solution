@@ -50,6 +50,7 @@ h2{
     margin: 0;
     padding: 0;
     text-decoration: underline .01rem;
+    font-weight:900;
 }
 #para2{
     color:var(--secondary-text);
@@ -123,7 +124,7 @@ button:active{
     height: 20px;
     border-radius: 4px;
     margin: 8px auto ;
-    padding: 5px;
+    padding: 5px 0;
     font-size: 1.2rem;
     color: var(--secondary-text);
     cursor:pointer;
