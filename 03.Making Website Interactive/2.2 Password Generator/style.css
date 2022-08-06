@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 :root{
     --body-bg:#000;
     --primary-bg-color : #1e1727;
@@ -20,6 +21,9 @@ body {
     padding: 0;
     background-color: var(--body-bg);
     color: white;
+    
+
+font-family: 'Overpass', sans-serif;
 }
 
 #light-dark{
@@ -32,13 +36,13 @@ body {
     color: var(--primary-text);
 }
 
-#continer{
+#card{
     display: flex;
     flex-direction: column;
     background-color: var(--primary-bg-color);
     margin: 4% auto 0;
     border-radius: 10px;
-    width: 460px;
+    width: 340px;
     padding: 20px;
     color: var(--primary-text);
     box-shadow: 0 0 20px var(--primary-text);
@@ -136,3 +140,20 @@ button:active{
     transform: scale(.95);
 }
 
+
+
+#footer{
+    margin: 20px auto;
+    display: flex;
+    color: var(--primary-text);
+    justify-content: center;
+}
+span{
+    color: red;
+    margin: 0 4px;
+}
+a{
+    color: var(--primary-text);
+    margin: 0 4px;
+    /* text-decoration: none; */
+}
