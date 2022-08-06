@@ -107,15 +107,9 @@ convertBtn.addEventListener('click',()=>{
     
     if(warning.hidden == true){
         toBeConverted = input.value ? Number(input.value) : 1
+        conversionCard.textContent = ''
         convertLength(toBeConverted)
         convertVolume(toBeConverted)
         convertMass(toBeConverted)
-        // <div class="converted">
-        //         <h3>Length (Meter/Feet)</h3>
-        //         <p id="len">20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
-        //     </div>
-
-        
-
     }
 })
