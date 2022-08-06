@@ -1,0 +1,114 @@
+:root{
+    
+    --body-bg:rgb(50, 47, 47);
+    --header-bg : #6943FF;
+    --header-text : #fff;
+    --main-bg : #1F2937;
+    --section-primary-text : #CCC1FF;
+    --section-secondary-text : #FFFFFF;
+    --section-bg : #273549;
+}
+#light-dark{
+ text-align: right;    
+}
+#icon{
+    width: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--section-bg);
+    transition: all .71s;
+    position: absolute;
+    right: 10px;
+}
+.light-mode{
+    --body-bg:rgb(228, 218, 218);
+    --header-bg : #6943FF;
+    --header-text : #fff;
+    --main-bg : #F4F4F4;
+    --section-primary-text : #5A537B;
+    --section-secondary-text : #353535;
+    --section-bg : #fff;
+    --common-border:#B295FF;
+    
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--body-bg);
+    margin: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#card{
+    margin: 10px auto;
+    background-color: var(--main-bg);
+    border-radius: 10px;
+    max-width: 480px;
+    box-shadow: 0 0 12px var(--section-secondary-text);
+    
+}
+
+#input{
+    text-align: center;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+    
+}
+input,button{
+
+    display: block;
+    padding: 5px 7px;
+    margin: 10px auto;
+    font-size: 0.7rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+span{
+    color:rgb(0, 255, 162);
+    font-weight: 900;
+    
+}
+#text{
+    border: 2.5px solid var(--common-border);
+    text-align: center;
+    width: 20%;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border-radius: 10px;
+
+
+}
+.conversion{
+    padding: 10px;
+
+}
+
+.converted{
+    background-color: var(--section-bg);
+    text-align: center;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+h3{
+    color: var(--section-primary-text);
+}
+
+p{
+    color: var(--section-secondary-text);
+}
+
+
+@media screen and (max-width:600px) {
+    #icon{
+        position: unset;
+        margin-right: 20px;
+        }
+
+}
