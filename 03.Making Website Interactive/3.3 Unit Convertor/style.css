@@ -112,3 +112,22 @@ p{
         }
 
 }
+
+
+/* footer  */
+
+#footer{
+    margin: 20px auto;
+    display: flex;
+    color: var(--section-primary-text);
+    justify-content: center;
+}
+span{
+    color: red;
+    margin: 0 4px;
+}
+a{
+    color: var(--primary-text);
+    margin: 0 4px;
+    /* text-decoration: none; */
+}
