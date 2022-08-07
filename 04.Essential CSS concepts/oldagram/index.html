@@ -1,15 +1,61 @@
 
 <html>
     
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-         <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <img src="images/logo.png">
+        <div id="container">
+            <header>
+                <div id="header">
+                    <img id ='logo' src="images/logo.png" alt="oldagram logo">
+                    <img class="profile-pic" id ='user-avatar' src="images/user-avatar.png" alt="user images">
+                </div>
+             </header>
+    
+            <main>
+                <div class='user' id="user-0">
+                    <section class="user-info">
+                        <img class="profile-pic" src = "images/avatar-vangogh.jpg" alt="user 0 images">
+                        <div class="name-location">
+                            <h4 class='name'>Vincent van Gogh</h4>
+                            <p class='location'>Zundert, Netherlands</p>
+                        </div>
+                        </section>
+                
+                        <section class="post-container">
+                            <img class='post' src="images/post-vangogh.jpg" alt="Vincent van Gogh's post" ondblclick=updateLikesViaPost(event)>
+                        </section>
+                
+                        <section class="post-info-container">
+                            <div class="like-follow-btn">
+                                <img src="images/icon-heart.png" class="like-btn" alt="like button" onclick=updateLikesViaLike(event)>
+                                <img src="images/icon-comment.png" class="comment-btn"alt="comments button">
+                                <img src="images/icon-dm.png" class="dm-btn"alt="dm button">
+                            </div>
+                            <div class="likes-container">
+                                <h4 class="total-likes"><span class='likes'>21</span> likes</h4>
+                            </div>
+                            <div class="comments-container">
+                                <div class="comments">
+                                    <h4 class="username">vincey1853</h4>
+                                    <p class="comment">just took a few mushrooms lol</p>
+                                </div>
+                                
+                            </div>
+                        </section>
+                </div>
+
+                    
+    
+            </main>
+    
+        </div>
+
+
         <script src="index.js"></script>
     </body>
 </html>

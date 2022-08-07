@@ -5,5 +5,86 @@ html, body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
 }
 
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgb(219, 215, 215);
+    background-color: white;
+}
+.user{
+    background-color: white;
+    margin-bottom: 20px;
+}
+main{
+    background-color: whitesmoke;
+}
+#logo{
+    width: 100px;
+    height: 40px;
+}
+.profile-pic-user{
+    border-radius:50%;
+    width: 40px;
+    height: 40px; 
+}
+.profile-pic{
+    border-radius:50%;
+    width: 40px;
+    height: 40px;
+}
+.user-info{
+    display: flex;
+    padding: 13px 0 10px 10px;
+}
+.name-location{
+    margin-left: 10px;
+
+}
+.post{
+    width: 100%;
+}
+.post-info-container{
+    margin: 10px 5px 5px 10px;
+}
+.like-follow-btn{
+    margin-top: 15px;
+}
+.like-follow-btn > img{
+    width: 5%;
+    margin-right: 5px;
+}
+.like-follow-btn > img:hover{
+    opacity: .4;
+}
+.like-follow-btn > img:active{
+    transform: scale(.97);
+}
+
+.profile-pic:hover{
+    transform: scale(1.07);
+    box-shadow: 0 0 5px grey;
+}
+.likes-container{
+    margin: 4px 0;
+}
+
+.comments{
+    display: flex;
+    padding:8px 0 18px;
+}
+.username{
+    margin-right: 3px;
+}
