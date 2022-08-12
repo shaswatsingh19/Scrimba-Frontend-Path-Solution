@@ -27,3 +27,10 @@ setInterval(() => {
     currEle =   (currEle+1)%carousel.length
     changeImage()
 },5000)
+
+
+/*
+Feature  suggestion 
+Automated transition
+show the user which slide your on
+*/

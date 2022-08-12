@@ -12,17 +12,18 @@ body{
     }
 }
 
+.carousel{
+    max-width: 100%;
+    position: relative;
+}
 .carousel .carousel-item img {
     width: 100%;
     max-width: 100%;
     height: 400px;
     margin: 10px auto;
+    border-radius: 15px;
 }
-.carousel{
-    max-width: 100%;
-    
-    position: relative;
-}
+
 .carousel-item{
     display: none;
 }
@@ -58,6 +59,8 @@ button:active{
     box-shadow: 0 10px 20px black;
 }
 
+
+
 .carousel .carousel-actions{
     display: flex;
     justify-content: space-between;
@@ -70,5 +73,3 @@ button:active{
     transform: translateY(-50%); /*to center the arrow*/
 
 }
-
-
