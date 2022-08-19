@@ -24,7 +24,7 @@ header{
 .container-nav{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 h1{
@@ -52,6 +52,7 @@ ul{
     font-weight: bold;
     font-size: 1rem;
     text-transform:uppercase;
+    
 }
 .list-item{
     margin: 0 15px;
@@ -76,26 +77,107 @@ ul{
     position: absolute;
     top:16px;
     left:0px;
-    transition: all .8s;
+    transition: all .5s;
 }
 .active-link:hover::after{
     width: 0;
-    transition: all .8s;
-}
-
-
-
-img{
-    width: 10%;
+    transition: all .5s;
 }
 
 .container-main{
     display: flex;
-
+    gap: 40px;
+    margin: 40px auto 0;
+}
+img{
+    width: 20%;
 }
 
-section,aside{
-    border: 1px solid ;
+.main-img{
+    width: 100%;
+}
+.date{
+    margin: 10px 0;
+    opacity: .8;
+    color: #707070;
+    font-size: .71rem;
+    text-transform:uppercase;
+}
+.current-post{
+    border-bottom: 2px solid;
+}
+.post-title{
+    font-family:'Lora', serif ;
+    font-size: 1.8rem;
+    color:#143774;
+    font-weight: 400;
+}
+.post-text{
+    color: #707070;
+    opacity: .9;
+    margin: 15px auto;
+}
+.older-posts{
+    margin: 25px auto;
+}
+.post-text span{
+    color: #707070;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.post-link{
+    font-size: .9rem;
+    color: #1792D2;
+    text-decoration: underline;
+}
+.continue,.aside-post>h2{
+    font-size: .9rem;
+    text-transform: uppercase;
+    margin: 10px auto;
+    color: #1792D2;
+    cursor: pointer;
+}
+
+.post{
+    display: flex;
+    gap:15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px auto;
+}
+.post-image-date{
+    width: 50%;
+}
+.post-detail{
+    width: 100%;
+}
+
+.aside-posts,.about-me{
+    border: 15px solid #dcdada;
+    margin: 0px auto 30px;
+    padding: 25px;
+}
+
+.aside-img,.post-img{
+    width: 100%;
+    margin: 10px auto;
+}
+.aside-post + .aside-post{
+    border-top: 1px solid;
+}
+
+.aside-post{
+    margin:15px auto;
+}
+img{
+    box-shadow: 0 0 10px gray;
+}
+
+footer{
+    padding: 50px;
+    text-align: center;
+    background-color: #143774;
+    color: #1792D2;
 }
 
 /* 450px to 770px  */
@@ -105,6 +187,16 @@ section,aside{
     }
     header{
         text-align: center;
+    }
+    .container-main{
+        flex-direction: column;
+        width: 90%;
+    }
+    .post{
+        flex-direction: column;
+    }
+    .post-image-date{
+        width: 100%;
     }
 
 }
