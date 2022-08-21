@@ -7,18 +7,19 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.125rem;
     background-color: whitesmoke;   
-    text-align: center; 
+    text-align: center;
+    
+
 }
 #container{
     display: flex;
     width: 90%;
-    
+    transform: scale(1);
+
     max-width: 1000px;
-    margin: 0px auto;
+    margin: 10px auto;
     background-color: rgb(255, 255, 255);
-    border:1px solid red;
     justify-content: space-between;
-    /* min-height: 500px; */
 }
 
 .details{
@@ -50,27 +51,58 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 65%;
+    min-width: 200px;
     margin: 0 auto;
 }
 
 input{
-    border: 2px solid #b4a5a5;
+    border: 2px solid black;
     border-radius: 5px;
     margin: 7px;
     text-align: center;
     padding: 3px 5px;
     /* font-size: 1.1rem; */
-    height: 30px;
+    height: 35px;
+    font-size: 1rem;
+    font-weight: 700;
 }
+
+.shake{
+    background-color: red;
+    color: white;
+    animation: shake 1s infinite ease-in;
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(2deg);
+        transform-origin: left;
+    }
+    100%{
+        transform: rotate(-2deg);
+        
+    }
+}
+
 #submit{
     background-color: #f18119;
     font-weight: 700;
-    color: #FFF;
+    color: rgb(221, 220, 220);
     font-size: .6rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+#submit:hover,
+#submit:focus{
+    background-color: #da7518;
+    color: #FFF;
+}
+#submit:active{
+    transform: scale(.99);
+    
 }
 .small{
     font-size: xx-small;
@@ -159,12 +191,9 @@ span{
    input{
     height: 40px;
    }
-   .heading{
-    border: 1px solid red;
-    
-}
-    .bg-image{
 
+    .bg-image{
+        background-image: url(images/ribs.jpg);
         position: relative;
     }
    .heading h2{
