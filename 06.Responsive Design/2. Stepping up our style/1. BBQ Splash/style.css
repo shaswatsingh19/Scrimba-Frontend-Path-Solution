@@ -96,7 +96,7 @@ h3 {
 
 .bg-image {
     order: 1;
-    width: 60%;
+    width: 53%;
     background-color: #4f2a07; /* if image didn't load up*/
     background: url("images/dark-ribs.jpg");
     background-position: center;
@@ -112,12 +112,13 @@ h3 {
 
 .details {
     order: 2;
-    width: 40%;
+    width: 47%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 10px;
+    margin:0  auto;
     }
 
 
@@ -125,8 +126,9 @@ h3 {
     .info {
     margin: 20px auto;
     color: #404040;
-    font-size: 0.851rem;
-    opacity: 0.7;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 900;
     }
 
 
