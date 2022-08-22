@@ -1,121 +1,104 @@
-
-*{
-    margin: 0;
-    box-sizing: border-box;
-    }
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.125rem;
-    background-color: whitesmoke;   
-    text-align: center;
-    
-
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-#container{
-    display: flex;
-    width: 90%;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.125rem;
+  background-color: whitesmoke;
+  text-align: center;
+  animation: start 1s;
+}
+@keyframes start {
+  0% {
+    transform: scale(0.94);
+  }
+  100% {
     transform: scale(1);
-
-    max-width: 1000px;
-    margin: 10px auto;
-    background-color: rgb(255, 255, 255);
-    justify-content: space-between;
+  }
 }
 
-.details{
-    order: 2;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* padding: 22% 20px; */
-    width: 40%;
-    padding: 10% 10px;
+/* =================
+   Typography
+   ================= 
+*/
+
+h1 + p , h2+p{
+color: #f18119;
+text-transform: uppercase;
+font-weight: 900;
+margin: 5px;
+font-size: 1.4rem;
 }
 
-.detail-title{
-    font-size: 2rem;
-}
-.register{
-    color:#f18119;
-    text-transform: uppercase;
+
+h1 {
+    font-weight :100;
+    margin: 15px auto ;
+    }
+    span {
     font-weight: 900;
-    margin: 5px;
-    font-size: 1.2rem;
-}
-
-.info{
-    margin: 20px auto;
-    color:#404040;
-    font-size: .851rem;
-    opacity:.7;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    min-width: 200px;
-    margin: 0 auto;
-}
-
-input{
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 7px;
-    text-align: center;
-    padding: 3px 5px;
-    /* font-size: 1.1rem; */
-    height: 35px;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.shake{
-    background-color: red;
-    color: white;
-    animation: shake 1s infinite ease-in;
-}
-
-@keyframes shake {
-    0%{
-        transform: rotate(2deg);
-        transform-origin: left;
     }
-    100%{
-        transform: rotate(-2deg);
-        
-    }
-}
+h2 {
+    font-size: 2rem;
+  }
 
-#submit{
-    background-color: #f18119;
-    font-weight: 700;
-    color: rgb(221, 220, 220);
-    font-size: .6rem;
-    letter-spacing: 1.5px;
+h3 {
+    color: #f18119;
     text-transform: uppercase;
-    cursor: pointer;
+    margin: 0 auto;
+    font-size: 0.65rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+  }
+  
+  h3::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin:0 auto;
+    background: #f18119;
+    transition: ease-in 0.46s;
+  }
+  
+  h3:hover::before {
+    width: 0%;
+  }
+  
+
+/* =================
+   Layout
+   ================= 
+*/
+
+#container {
+  display: flex;
+  width: 90%;
+  transform: scale(1);
+  max-width: 1000px;
+  margin: 15px auto;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  transition: all 0.6s;
+  cursor: pointer;
+  border-radius: 20px;
+  min-height: 80vh;
+}
+#container:hover {
+  box-shadow: 0 0 100px #f18119;
+  transform: scale(1.01);
 }
 
-#submit:hover,
-#submit:focus{
-    background-color: #da7518;
-    color: #FFF;
-}
-#submit:active{
-    transform: scale(.99);
-    
-}
-.small{
-    font-size: xx-small;
-    width: 35%;
-    margin: 5px auto;
-    opacity: .7;
-    color:#404040
-}
-
-.bg-image{
+.bg-image {
     order: 1;
     width: 60%;
-    background:url('images/dark-ribs.jpg');
+    background-color: #4f2a07; /* if image didn't load up*/
+    background: url("images/dark-ribs.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -124,82 +107,117 @@ input{
     color: white;
     position: relative;
     padding: 0 4em;
+    border-radius: 20px 0px 0 20px;
 }
 
-.image-top{
-    color: #f18119;
-    text-transform: uppercase;
+.details {
+    order: 2;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    }
+
+
+
+    .info {
+    margin: 20px auto;
+    color: #404040;
+    font-size: 0.851rem;
+    opacity: 0.7;
+    }
+
+
+    form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    min-width: 200px;
     margin: 0 auto;
-    font-size: .65rem;
-    
-    /* border-top: 4px solid ; */
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
+        }
+
+        input {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 7px;
+        text-align: center;
+        padding: 3px 5px;
+        /* font-size: 1.1rem; */
+        height: 35px;
+        font-size: 1rem;
+        font-weight: 700;
+        }
+
+        .shake {
+        background-color: red;
+        color: white;
+        animation: shake 1s infinite ease-in;
+        }
+
+        @keyframes shake {
+        0% {
+            transform: rotate(2deg);
+            transform-origin: left;
+        }
+        100% {
+            transform: rotate(-2deg);
+        }
+        }
+
+        #submit {
+        background-color: #f18119;
+        font-weight: 700;
+        color: rgb(221, 220, 220);
+        font-size: 0.6rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        }
+
+        #submit:hover,
+        #submit:focus {
+        background-color: #da7518;
+        color: #fff;
+        }
+        #submit:active {
+        transform: scale(0.99);
+        }
+    .small {
+    font-size: xx-small;
+    width: 35%;
+    margin: 5px auto;
+    opacity: 0.7;
+    color: #404040;
+    }
+
+@media screen and (max-width: 700px) {
+
+  #container {
+    flex-direction: column;
+  }
+  .details {
+    margin: 20px auto;
     width: 100%;
-    cursor: pointer;
-    
-}
-
-.image-top::before{
-    content: "";
-    display: block;
-    height: 5px;
-    width: 30%;
-
-    background:#f18119;
-    margin-top: -4.5px;
-    transition: ease-in .46s;
-    margin: 0 auto;
-}
-
-.image-top:hover::before{
-    width: 0%;
-}
-
-.main-title{
-    font-weight: 100;
-    margin: 15px auto;
-}
-span{
-    font-weight: 900;
-}
-.heading h2{
-    color: #f18119;
-    text-transform: uppercase;
-    margin: 0 auto;
-    font-size: 1.4rem;
-}
-
-
-@media screen and (max-width:700px) {
-    #container{
-        flex-direction:column;
-    }
-    .details{
-        width: 100%;
-    }
-    .bg-image{
-        width: 100%;
-        min-height: 400px;
-   }
-   form{
+  }
+  .bg-image {
+    width: 100%;
+    min-height: 350px;
+    border-radius: 20px 20px 0 0;
+  }
+  h1{
+    font-size: 1.8rem;
+    margin: 4.1em 0;
+  }
+  h1+p{
+    font-size: 1.2rem;
+  }
+  form {
     width: 60%;
-    
-   }
-   input{
+  }
+  input {
     height: 40px;
-   }
+  }
 
-    .bg-image{
-        background-image: url(images/ribs.jpg);
-        position: relative;
-    }
-   .heading h2{
-    position: absolute;
-    bottom: 20px;
-    left:0;
-    right: 0;
-   }
 }
