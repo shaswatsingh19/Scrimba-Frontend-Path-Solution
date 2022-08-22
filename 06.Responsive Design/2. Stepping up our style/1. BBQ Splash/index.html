@@ -18,13 +18,16 @@
           is to learn from the best. You can do just that by signing up for this
           free webinar!
         </p>
-        <form>
-          <input type="text" id="name" placeholder="Enter name" />
-          <input type="email" id="email" placeholder="Email" />
-          <input type="submit" value="register" id="submit" />
+        <form action="" method="post">
+            <label for="name" id="name-label"></label>
+            <input aria-label="full Name field" type="text" id="name" placeholder="Enter name" required/>
+            <label for="email" id="email-label"></label>
+            <input aria-label="email field" type="email" id="email" placeholder="Email" required/>
+          <button type="submit" id="submit">Register</button>
         </form>
         <p class="small">
-          We'll never share your information without your permission(just
+          We will never share your information without your permission(
+            just
           kidding 😈)
         </p>
       </div>
