@@ -24,13 +24,13 @@ body {
    ================= 
 */
 
-h1 + p , h2+p{
+/* h1 + p , h2+p{
 color: #f18119;
 text-transform: uppercase;
 font-weight: 900;
 margin: 5px;
 font-size: 1.4rem;
-}
+} */
 
 
 h1 {
