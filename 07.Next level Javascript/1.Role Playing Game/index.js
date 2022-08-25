@@ -1,9 +1,8 @@
 // Generate Random Number from 1 to 6
 let getDiceRollArray = (diceCount) => { 
-    let diceRoll = []
-    for(let i=0; i<diceCount ;i++){
-        diceRoll.push(Math.floor(Math.random()*6 + 1))
-    }
+
+    let diceRoll = Array(diceCount).fill(0).map(() => Math.floor(Math.random()*6 + 1))
+
     return  diceRoll
 }
 
@@ -28,7 +27,10 @@ function renderCharacter(data) {
 
 
     // making new divs that will go inside dice container and adding number from getDiceRollArray
-    let diceHtml =  getDiceRollArray(diceCount).map(num => `<div class="dice">${num}</div>`).join('')
+    let diceHtml =  getDiceRollArray(diceCount).map(num => 
+        {
+            return `<div class="dice">${num}</div>` }
+        ).join('')
 
     document.getElementById(elementId).innerHTML =
         `<div class="character-card">
