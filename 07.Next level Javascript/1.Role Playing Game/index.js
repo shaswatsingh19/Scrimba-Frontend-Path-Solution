@@ -11,7 +11,7 @@ const monster = {
     name : "Orc",
     avatar : "images/orc.png",
     health : "40",
-    diceRoll : [2,4],
+    diceRoll : [2,1],
     diceCount :2
 }
 function renderCharacter(data) {
@@ -19,11 +19,11 @@ function renderCharacter(data) {
     // we use object destructuring so that we don't need to write object.property everywhere 
     const {elementId,name,avatar,health,diceRoll , diceCount} = data
 
-    let diceHtml = ''
 
-    diceRoll.forEach(roll => {
-        diceHtml +=  `<div class="dice">${roll}</div>`
-    })
+    let diceHtml =  diceRoll.map(roll => {
+        return `<div class="dice">${roll}</div>`
+    }).join('</br>')
+    console.log(diceHtml)
 
 
     document.getElementById(elementId).innerHTML =
