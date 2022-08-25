@@ -15,14 +15,16 @@ const monster = {
     diceCount :2
 }
 function renderCharacter(data) {
+    
     // we use object destructuring so that we don't need to write object.property everywhere 
     const {elementId,name,avatar,health,diceRoll , diceCount} = data
 
     let diceHtml = ''
 
-    for (let i=0;i<diceCount;i++){
-        diceHtml +=  `<div class="dice">${diceRoll[i]}</div>`
-    }
+    diceRoll.forEach(roll => {
+        diceHtml +=  `<div class="dice">${roll}</div>`
+    })
+
 
     document.getElementById(elementId).innerHTML =
         `<div class="character-card">
@@ -31,6 +33,7 @@ function renderCharacter(data) {
             <div class="health">health: <b> ${health} </b></div>
             <div class="dice-container">
                 ${diceHtml}
+                
             </div>
         </div>`
 }
