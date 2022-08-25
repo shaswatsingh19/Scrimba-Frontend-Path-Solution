@@ -1,6 +1,6 @@
-// Generate Random Number from 1 to 10
+// Generate Random Number from 1 to 6
 let getDiceRollArray = () => { 
-    return Math.ceil(Math.random()*10)
+    return Math.floor(Math.random()*6 + 1)
 }
 
 const hero = {
