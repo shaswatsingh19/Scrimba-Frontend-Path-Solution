@@ -21,26 +21,36 @@ const monster = {
     health : "40",
     diceCount :2
 }
-function renderCharacter(data) {
-    
-    // we use object destructuring so that we don't need to write object.property everywhere 
-    const {elementId,name,avatar,health, diceCount} = data
 
 
-    // making new divs that will go inside dice container and adding number from getDiceRollArray
-    let diceHtml =  getDiceRollArray(diceCount).map(num => `<div class="dice">${num}</div>` ).join('')
+//  Constructor  function
+function Character(data){
+    this.elementId = data.elementId
+    this.name = data.name;
+    this.avatar = data.avatar;
+    this.health = data.health;
+    this.diceCount = data.diceCount;
+    this.getCharacterHtml = function () {
+        let diceHtml =  getDiceRollArray(this.diceCount).map(num => `<div class="dice">${num}</div>` ).join('')
 
-    document.getElementById(elementId).innerHTML =
-        `<div class="character-card">
-            <h4 class="name"> ${name} </h4>
-            <img class="avatar" src="${avatar}" />
-            <div class="health">health: <b> ${health} </b></div>
-            <div class="dice-container">
-                ${diceHtml}
-                
-            </div>
-        </div>`
+          
+        // making new divs that will go inside dice container and adding number from getDiceRollArray
+        document.getElementById(this.elementId).innerHTML =
+            `<div class="character-card">
+                <h4 class="name"> ${this.name} </h4>
+                <img class="avatar" src="${this.avatar}" />
+                <div class="health">health: <b> ${this.health} </b></div>
+                <div class="dice-container">
+                    ${diceHtml}
+                    
+                </div>
+            </div>`
+    }
+
+    this.getCharacterHtml()
 }
 
-renderCharacter(hero);
-renderCharacter(monster);
+
+
+const wizard = new Character(hero)
+const orc = new Character(monster)
