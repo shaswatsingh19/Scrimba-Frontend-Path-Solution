@@ -38,8 +38,9 @@ function Character(data) {
     const { elementId, name, avatar, health, diceCount } = this;
     let diceHtml = this.getDiceHtml(diceCount)
 
+    // return the value and assign outside to innerHtml of that
     // making new divs that will go inside dice container and adding number from getDiceRollArray
-    document.getElementById(elementId).innerHTML = `<div class="character-card">
+    return  `<div class="character-card">
                 <h4 class="name"> ${name} </h4>
                 <img class="avatar" src="${avatar}" />
                 <div class="health">health: <b> ${health} </b></div>
@@ -55,5 +56,5 @@ const wizard = new Character(hero);
 const orc = new Character(monster);
 
 
-wizard.getCharacterHtml()
-orc.getCharacterHtml()
+document.getElementById('hero').innerHTML = wizard.getCharacterHtml()
+document.getElementById('monster').innerHTML = orc.getCharacterHtml()
