@@ -7,20 +7,24 @@ let getDiceRollArray = (diceCount) => {
     });
 };
 
-const hero = {
-  elementId: "hero",
-  name: "Wizard",
-  avatar: "images/wizard.png",
-  health: 60,
-  diceCount: 3,
-};
-const monster = {
-  elementId: "monster",
-  name: "Orc",
-  avatar: "images/orc.png",
-  health: "40",
-  diceCount: 2,
-};
+
+const characterData = {
+
+    hero : {
+      elementId: "hero",
+      name: "Wizard",
+      avatar: "images/wizard.png",
+      health: 60,
+      diceCount: 3,
+    },
+    monster : {
+      elementId: "monster",
+      name: "Orc",
+      avatar: "images/orc.png",
+      health: "40",
+      diceCount: 2,
+    },
+}
 
 //  Constructor  function
 function Character(data) {
@@ -52,9 +56,13 @@ function Character(data) {
 
 }
 
-const wizard = new Character(hero);
-const orc = new Character(monster);
 
+function render(){
+    
+    document.getElementById(wizard.elementId).innerHTML = wizard.getCharacterHtml()
+    document.getElementById(orc.elementId).innerHTML = orc.getCharacterHtml()
+}
 
-document.getElementById(wizard.elementId).innerHTML = wizard.getCharacterHtml()
-document.getElementById(orc.elementId).innerHTML = orc.getCharacterHtml()
+const wizard = new Character(characterData.hero);
+const orc = new Character(characterData.monster);
+render()
