@@ -25,21 +25,22 @@ const monster = {
 
 //  Constructor  function
 function Character(data){
-    this.elementId = data.elementId
-    this.name = data.name;
-    this.avatar = data.avatar;
-    this.health = data.health;
-    this.diceCount = data.diceCount;
+
+    // assign function copy data to this object as a new object i.e. deep copy
+    Object.assign(this,data)
+    
     this.getCharacterHtml = function () {
-        let diceHtml =  getDiceRollArray(this.diceCount).map(num => `<div class="dice">${num}</div>` ).join('')
+
+        const { elementId, name, avatar, health, diceCount } = this;
+        let diceHtml =  getDiceRollArray(diceCount).map(num => `<div class="dice">${num}</div>` ).join('')
 
           
         // making new divs that will go inside dice container and adding number from getDiceRollArray
-        document.getElementById(this.elementId).innerHTML =
+        document.getElementById(elementId).innerHTML =
             `<div class="character-card">
-                <h4 class="name"> ${this.name} </h4>
-                <img class="avatar" src="${this.avatar}" />
-                <div class="health">health: <b> ${this.health} </b></div>
+                <h4 class="name"> ${name} </h4>
+                <img class="avatar" src="${avatar}" />
+                <div class="health">health: <b> ${health} </b></div>
                 <div class="dice-container">
                     ${diceHtml}
                     
