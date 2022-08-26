@@ -1,3 +1,6 @@
+import {characterData} from './data.js'
+
+
 // Generate Random Number from 1 to 6
 let getDiceRollArray = (diceCount) => {
   return Array(diceCount)
@@ -8,23 +11,6 @@ let getDiceRollArray = (diceCount) => {
 };
 
 
-const characterData = {
-
-    hero : {
-      elementId: "hero",
-      name: "Wizard",
-      avatar: "images/wizard.png",
-      health: 60,
-      diceCount: 3,
-    },
-    monster : {
-      elementId: "monster",
-      name: "Orc",
-      avatar: "images/orc.png",
-      health: "40",
-      diceCount: 2,
-    },
-}
 
 //  Constructor  function
 function Character(data) {
