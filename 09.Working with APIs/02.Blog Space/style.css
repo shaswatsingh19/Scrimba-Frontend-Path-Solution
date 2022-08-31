@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+h3{
+    border-bottom: 2px solid black;
+    display: inline-block;
+    margin: 0 ;
+    text-transform: capitalize;
+}
+
+p{
+    padding-bottom:15px;
+    border-bottom: 1px solid rgb(232, 225, 225);
+}
+
