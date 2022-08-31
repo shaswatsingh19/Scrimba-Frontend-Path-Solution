@@ -1,9 +1,25 @@
 *{
+    margin: 0;
     box-sizing: border-box;
 }
 
 body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: whitesmoke;
+}
+
+nav{
+    padding: 15px;
+    background-color: bisque;
+    position:fixed;
+    z-index: 3;
+    width: 100%;
+}
+#blog-list{
+    padding: 15px;
+    position: absolute;
+    top:60px
+    /* padding-top: 70px; */
 }
 h3{
     border-bottom: 2px solid black;
@@ -13,6 +29,7 @@ h3{
 }
 
 p{
+    margin: 20px auto;
     padding-bottom:15px;
     border-bottom: 1px solid rgb(232, 225, 225);
 }

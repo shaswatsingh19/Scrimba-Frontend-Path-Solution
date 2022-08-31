@@ -7,7 +7,7 @@ fetch(url , {method:"GET"})
 .then(data => {
     
 
-    let top5Posts = data.slice(0,5)
+    let top5Posts = data.slice(0,45)
 
     console.log(top5Posts)
     let arr =[]
