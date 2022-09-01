@@ -7,22 +7,8 @@ body{
     background-color: whitesmoke;
     font-family: 'Karla', Verdana, sans-serif;;
 }
-
-nav{
-    padding: 15px;
-    background-color: bisque;
-    position:fixed;
-    z-index: 3;
-    width: 100%;
-}
-#blog-list{
-    padding: 15px;
-    position: absolute;
-    top:60px
-    /* padding-top: 70px; */
-}
 h3{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(142, 142, 142);
     display: inline-block;
     margin: 0 ;
     text-transform: capitalize;
@@ -32,5 +18,40 @@ p{
     margin: 20px auto;
     padding-bottom:15px;
     border-bottom: 1px solid rgb(232, 225, 225);
+}
+
+nav{
+    padding: 15px;
+    background-color: bisque;
+    position:fixed;
+    z-index: 3; 
+    width: 100%;
+}
+#blog-list{
+    padding:15px;
+}
+
+
+form{
+    padding: 65px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* width: 100%; */
+    background-color: cadetblue;
+}
+
+input,label,textarea,button{
+    margin: 8px 0 0;
+    max-width: 400px;
+    width: 100%;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    
+    cursor: pointer;
 }
 
