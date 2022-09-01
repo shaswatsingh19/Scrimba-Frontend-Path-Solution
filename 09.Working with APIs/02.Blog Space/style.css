@@ -1,57 +1,58 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: whitesmoke;
-    font-family: 'Karla', Verdana, sans-serif;;
+body {
+  background-color: whitesmoke;
+  font-family: "Karla", Verdana, sans-serif;
 }
-h3{
-    border-bottom: 2px solid rgb(142, 142, 142);
-    display: inline-block;
-    margin: 0 ;
-    text-transform: capitalize;
-}
-
-p{
-    margin: 20px auto;
-    padding-bottom:15px;
-    border-bottom: 1px solid rgb(232, 225, 225);
+h3 {
+  border-bottom: 2px solid rgb(142, 142, 142);
+  display: inline-block;
+  margin: 0;
+  text-transform: capitalize;
 }
 
-nav{
-    padding: 15px;
-    background-color: bisque;
-    position:fixed;
-    z-index: 3; 
-    width: 100%;
-}
-#blog-list{
-    padding:15px;
+p {
+  margin: 20px auto;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(232, 225, 225);
 }
 
-
-form{
-    padding: 65px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-    /* justify-content: flex-start; */
-    /* width: 100%; */
-    background-color: cadetblue;
+nav {
+  padding: 15px;
+  background-color: bisque;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+#blog-list {
+  padding: 15px;
 }
 
-input,label,textarea,button{
-    margin: 8px 0 0;
-    max-width: 400px;
-    width: 100%;
+form {
+  padding: 65px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
+  /* width: 100%; */
+  background-color: cadetblue;
 }
 
-button{
-    padding: 10px;
-    border-radius: 10px;
-    
-    cursor: pointer;
+input,
+label,
+textarea,
+button {
+  margin: 8px 0 0;
+  max-width: 400px;
+  width: 100%;
 }
 
+button {
+  padding: 10px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
