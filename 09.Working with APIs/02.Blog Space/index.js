@@ -16,21 +16,14 @@ fetch(url , {method:"GET"})
     let arr =[]
 
     top5Posts.forEach(data => {
-        const  title = document.createElement('h3')
-        const  p = document.createElement('p')
-        const  div = document.createElement('div')
-
-        title.textContent = data.title
-        p.textContent = data.body.substring(0,1).toUpperCase() + data.body.substring(1,)
         
-        div.append(title,p)
-        arr.push(div)
-        // document.body.append(title)
-        // document.body.append(p)
+        // add to dom function 
+        let newDiv = addToDom(data.title,data.body)
+        arr.push(newDiv)
+        
     })
 
     blogList.append(...arr)
-
 
 })
 
@@ -48,27 +41,14 @@ document.getElementById('new-post').addEventListener('submit',function(e){
         title:postTitle.value,
         body:postBody.value,
     }
-    console.log(post)
-
-
-    // Adding to DOM 
-    const  title = document.createElement('h3')
-    const  p = document.createElement('p')
-    const  div = document.createElement('div')
-
-    title.textContent = postTitle.value
-    p.textContent = postBody.value.substring(0,1).toUpperCase() + postBody.value.substring(1,)
-    
-    div.append(title,p)
-    blogList.prepend(div)
-    
+        
 
     // Post request 
     const options = {
         method:"POST",
         body :JSON.stringify(post),
         headers:{
-            "Content-type":'application/json; charset=UTF-8' 
+            "Content-Type":'application/json; charset=UTF-8' 
         },
     }
 
@@ -77,11 +57,29 @@ document.getElementById('new-post').addEventListener('submit',function(e){
         .then(data => console.log(data))
      
 
+    
+    // Adding to DOM 
+    let newDiv = addToDom(post.title,post.body)
+    blogList.prepend(newDiv)
+
     // Removing the current values 
     postTitle.value = ''
     postBody.value = ''
 })
 
 
+// addToDom function 
+function addToDom(currTitle,currBody){
+    
+    const  title = document.createElement('h3')
+    const  p = document.createElement('p')
+    const  div = document.createElement('div')
 
+    title.textContent =currTitle
+    p.textContent = currBody.substring(0,1).toUpperCase() + currBody.substring(1,)
+    
+    div.append(title,p)
+
+    return div
+}
 
