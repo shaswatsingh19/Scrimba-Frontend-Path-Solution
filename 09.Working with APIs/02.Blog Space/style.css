@@ -50,6 +50,9 @@ button {
   width: 100%;
 }
 
+label{
+  font-weight: 900;
+}
 button {
   padding: 10px;
   border-radius: 10px;
