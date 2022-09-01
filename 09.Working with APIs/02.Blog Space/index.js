@@ -62,11 +62,24 @@ document.getElementById('new-post').addEventListener('submit',function(e){
     div.append(title,p)
     blogList.prepend(div)
     
+
+    // Post request 
+    fetch(url , {
+        method:"POST",
+        body :JSON.stringify(post),
+        headers:{
+            "Content-type":'application/json; charset=UTF-8' 
+        },
+    })
+        .then(resposne => resposne.json())
+        .then(data => console.log(data))
+     
+
+    // Removing the current values 
     postTitle.value = ''
     postBody.value = ''
-
-    
 })
+
 
 
 
