@@ -64,13 +64,15 @@ document.getElementById('new-post').addEventListener('submit',function(e){
     
 
     // Post request 
-    fetch(url , {
+    const options = {
         method:"POST",
         body :JSON.stringify(post),
         headers:{
             "Content-type":'application/json; charset=UTF-8' 
         },
-    })
+    }
+
+    fetch(url , options)
         .then(resposne => resposne.json())
         .then(data => console.log(data))
      
