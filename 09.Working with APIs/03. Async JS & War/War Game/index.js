@@ -11,14 +11,41 @@ let heading  = document.querySelector('h1')
 
 let deckId;
 
-// getting the initial deck of card 
-function getNewDeck() {
-
+function gameStarts(){
     drawCardBtn.disabled = false
     compScore.textContent = 0
     userScore.textContent = 0
     heading.textContent = "War!"
     heading.style.textShadow = "none"
+}
+
+function gameEnds(){
+    drawCardBtn.disabled = true
+
+    console.log('Game ends')
+
+    let userFinalS = parseInt(userScore.textContent)
+    let compFinalS = parseInt(compScore.textContent)
+    
+    console.log(userScore,compScore)
+    console.log(userFinalS,compFinalS)
+
+    if(compFinalS > userFinalS){
+        heading.textContent = 'Computer Wins'
+    }else if(compFinalS < userFinalS ){
+        heading.textContent = 'User Wins'
+    }else{
+        heading.textContent = 'Draw'
+    }
+
+    heading.style.textShadow = '0 0 20px white'
+
+}
+
+// getting the initial deck of card 
+function getNewDeck() {
+
+    gameStarts()
 
     fetch(Newurl)
         .then(res => res.json())
@@ -30,6 +57,7 @@ function getNewDeck() {
         })
 }
 
+
 function drawCardFromDeck() {
     const drawUrl = `https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`
 
@@ -40,6 +68,7 @@ function drawCardFromDeck() {
             console.log(data)
 
             let imgNumber = 0
+            
             cardImg.forEach(card => {
                 card.innerHTML = `<img src="${data.cards[imgNumber].image}">`
                 imgNumber+=1
@@ -47,9 +76,9 @@ function drawCardFromDeck() {
 
             checkScore(data.cards[0],data.cards[1])
 
-            remainingCard.textContent = parseInt(remainingCard.textContent) - 2
+            remainingCard.textContent = data.remaining
 
-            if (remainingCard.textContent == 50){
+            if (remainingCard.textContent == 48){
                 gameEnds()
             }
         })
@@ -83,28 +112,3 @@ newDeckBtn.addEventListener('click', getNewDeck)
 // Drawing 2 card from the deck 
 drawCardBtn.addEventListener('click', drawCardFromDeck)
 
-
-function gameEnds(){
-    drawCardBtn.disabled = true
-
-    console.log('Game ends')
-
-    let userFinalS = parseInt(userScore.textContent)
-    let compFinalS = parseInt(compScore.textContent)
-    
-    console.log(userScore,compScore)
-    console.log(userFinalS,compFinalS)
-
-    if(compFinalS > userFinalS){
-        heading.textContent = 'Computer Wins'
-    }else if(compFinalS < userFinalS ){
-        heading.textContent = 'User Wins'
-    }else{
-        heading.textContent = 'Draw'
-    }
-
-    heading.style.textShadow = '0 0 20px white'
-
-
-
-}
