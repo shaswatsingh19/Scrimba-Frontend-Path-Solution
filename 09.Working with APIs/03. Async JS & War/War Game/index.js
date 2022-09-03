@@ -17,6 +17,8 @@ function getNewDeck() {
     drawCardBtn.disabled = false
     compScore.textContent = 0
     userScore.textContent = 0
+    heading.textContent = "War!"
+    heading.style.textShadow = "none"
 
     fetch(Newurl)
         .then(res => res.json())
@@ -43,20 +45,38 @@ function drawCardFromDeck() {
                 imgNumber+=1
             })
 
-            if(data.cards[0].code > data.cards[1].code ){
-                compScore.textContent = parseInt(compScore.textContent) + 1
-            }else{
-                userScore.textContent = parseInt(userScore.textContent) + 1
-            }
-            console.log(compScore,userScore)
+            checkScore(data.cards[0],data.cards[1])
+
             remainingCard.textContent = parseInt(remainingCard.textContent) - 2
 
-            if (remainingCard.textContent == 46){
+            if (remainingCard.textContent == 50){
                 gameEnds()
             }
         })
 
 }
+
+
+function checkScore(card1,card2){
+    
+    const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
+    "10", "JACK", "QUEEN", "KING", "ACE"]
+
+    let card1Value = valueOptions.indexOf(card1.value)
+    let card2Value = valueOptions.indexOf(card2.value)
+    
+    console.log(card1Value)
+    console.log(card2Value)
+
+    if(card1Value > card2Value){
+        compScore.textContent = parseInt(compScore.textContent)+1
+    }else if(card1Value < card2Value){
+        userScore.textContent = parseInt(userScore.textContent)+1
+    }
+
+}
+
+
 
 newDeckBtn.addEventListener('click', getNewDeck)
 
@@ -74,7 +94,7 @@ function gameEnds(){
     
     console.log(userScore,compScore)
     console.log(userFinalS,compFinalS)
-    
+
     if(compFinalS > userFinalS){
         heading.textContent = 'Computer Wins'
     }else if(compFinalS < userFinalS ){
@@ -82,6 +102,9 @@ function gameEnds(){
     }else{
         heading.textContent = 'Draw'
     }
+
+    heading.style.textShadow = '0 0 20px white'
+
 
 
 }
