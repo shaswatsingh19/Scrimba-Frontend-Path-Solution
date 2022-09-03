@@ -4,8 +4,10 @@ const drawCardBtn = document.getElementById('draw-card')
 let remainingCard = document.getElementById('remaining-card')
 // const compImg = document.querySelector('.card-img-comp')
 // const userImg = document.querySelector('.card-img-user')
-let compScore = document.getElementById('computer-score')
-let userScore = document.getElementById('user-score')
+const compScoreEl = document.getElementById('computer-score')
+const userScoreEl = document.getElementById('user-score')
+let compScore = 0
+let userScore = 0
 const cardImg = document.querySelectorAll('.card-img')
 let heading  = document.querySelector('h1')
 
@@ -13,22 +15,22 @@ let deckId;
 
 function gameStarts(){
     drawCardBtn.disabled = false
-    compScore.textContent = 0
-    userScore.textContent = 0
+    compScore= 0
+    userScore= 0
+    userScoreEl.textContent = userScore
+    compScoreEl.textContent = compScore
+
     heading.textContent = "War!"
     heading.style.textShadow = "none"
 }
 
 function gameEnds(){
     drawCardBtn.disabled = true
-    
 
-    console.log('Game ends')
-
-    let userFinalS = parseInt(userScore.textContent)
-    let compFinalS = parseInt(compScore.textContent)
+    let userFinalS = parseInt(userScoreEl.textContent)
+    let compFinalS = parseInt(compScoreEl.textContent)
     
-    console.log(userScore,compScore)
+    console.log(userScoreEl,compScoreEl)
     console.log(userFinalS,compFinalS)
 
     if(compFinalS > userFinalS){
@@ -51,9 +53,9 @@ function getNewDeck() {
     fetch(Newurl)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            
             deckId = data.deck_id
-            console.log(deckId)
+            
             remainingCard.textContent = data.remaining
         })
 }
@@ -66,7 +68,7 @@ function drawCardFromDeck() {
     fetch(drawUrl)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            
 
             let imgNumber = 0
             
@@ -79,7 +81,7 @@ function drawCardFromDeck() {
 
             remainingCard.textContent = data.remaining
 
-            if (remainingCard.textContent == 48){
+            if (remainingCard.textContent == 0){
                 gameEnds()
             }
         })
@@ -95,18 +97,17 @@ function checkScore(card1,card2){
     let card1Value = valueOptions.indexOf(card1.value)
     let card2Value = valueOptions.indexOf(card2.value)
     
-    console.log(card1Value)
-    console.log(card2Value)
+    
 
     if(card1Value > card2Value){
-        compScore.textContent = parseInt(compScore.textContent)+1
+        compScore++
+        compScoreEl.textContent = compScore
     }else if(card1Value < card2Value){
-        userScore.textContent = parseInt(userScore.textContent)+1
+        userScore++
+        userScoreEl.textContent = userScore
     }
 
 }
-
-
 
 newDeckBtn.addEventListener('click', getNewDeck)
 
