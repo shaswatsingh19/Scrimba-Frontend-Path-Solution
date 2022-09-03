@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: green;
+}
+
+button{
+    background-color: yellow;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 1.42rem;
+    transition: all .4s;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(159, 159, 6);
+}
+button:active{
+    transform: scale(.97);
+}
+#new-deck{
+    position: fixed;
+    top:0;
+    left: 0;
+}
+#draw-card{
+    position: relative;
+    bottom: 0;
+    width: 100%
+}
+#cards{
+    display: flex;
+    margin: 50px auto 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+img{
+    margin: 5px;
+    width: 40%;
+    max-width: 200px;
+}
