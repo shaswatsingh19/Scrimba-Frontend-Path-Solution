@@ -21,6 +21,7 @@ function gameStarts(){
 
 function gameEnds(){
     drawCardBtn.disabled = true
+    
 
     console.log('Game ends')
 

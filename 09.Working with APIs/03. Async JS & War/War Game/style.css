@@ -27,6 +27,10 @@ button:hover{
 button:active{
     transform: scale(.97);
 }
+button:disabled{
+    cursor:not-allowed;
+    transform: scale(1);
+}
 img{
     width: 100%;
 }
