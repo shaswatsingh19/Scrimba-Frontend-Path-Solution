@@ -6,11 +6,9 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: green;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     height: 100vh;
 }
+
 
 button{
     background-color: yellow;
@@ -27,16 +25,43 @@ button:hover{
 button:active{
     transform: scale(.97);
 }
-#new-deck{
-    align-self: flex-start;
-}
-#cards{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 img{
     margin: 5px;
     width: 50%;
     max-width: 300px;
+}
+#new-deck{
+    align-self: flex-start;
+    margin-right: 10px;
+}
+header{
+    display: flex;
+    align-items: center;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#card1,#card2{
+    margin: 12px auto;
+}
+.card-img{
+    border: 1px solid ;
+    width: 100px;
+    height: calc(100px * 7/5);
+    border-radius: 10px;
+    margin: 5px auto;
+}
+
+
+#draw-card{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

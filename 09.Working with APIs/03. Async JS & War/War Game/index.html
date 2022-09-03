@@ -9,11 +9,27 @@
 
 </head>
 <body>
-    <button id="new-deck">Get new Deck</button>
 
-    <div id="cards">
+    <header>
+        <button id="new-deck">Get new Deck</button>
+        <h3>Remaining Card:<span id='remaining-card'>52</span></h3>
+    </header>
 
-    </div>
+    <main>
+        <h1>War!</h1>
+        <div id="cards">
+            <section id="card1">
+                <h2>Computer: <span id='computer-score'>0</span></h2>
+                <div class="card-img card-img-comp"></div>
+            </section>
+            <section id="card2">
+                <div class="card-img card-img-user"></div>
+                <h2>Me: <span id='user-score'>0</span></h2>
+            </section>   
+             
+        </div>
+    </main>
+
     <button id="draw-card">Draw</button>
 
 
