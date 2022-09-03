@@ -15,4 +15,4 @@
 #### Work on project 
 
 - War Project - Using Deck of Card API
-- Solor Project - Movie Watchlist
+- Solor Project - Movie Watchlist application
