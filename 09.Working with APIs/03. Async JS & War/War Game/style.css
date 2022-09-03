@@ -9,7 +9,9 @@ body{
     height: 100vh;
 }
 
-
+h2{
+    margin: 5px auto;
+}
 button{
     background-color: yellow;
     font-weight: 700;
@@ -26,9 +28,7 @@ button:active{
     transform: scale(.97);
 }
 img{
-    margin: 5px;
-    width: 50%;
-    max-width: 300px;
+    width: 100%;
 }
 #new-deck{
     align-self: flex-start;
@@ -50,12 +50,15 @@ main{
 #card1,#card2{
     margin: 12px auto;
 }
+#card1{
+    margin-bottom: 25px;
+}
 .card-img{
     border: 1px solid ;
-    width: 100px;
-    height: calc(100px * 7/5);
-    border-radius: 10px;
+    width: 97px;
+    height: calc(96px * 7/5);
     margin: 5px auto;
+    border-radius: 6px;
 }
 
 

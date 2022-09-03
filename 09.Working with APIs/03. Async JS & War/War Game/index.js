@@ -1,11 +1,11 @@
 const Newurl = "https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/"
 const newDeckBtn = document.getElementById('new-deck')
 const drawCardBtn = document.getElementById('draw-card')
-
-
-
-
-
+const remainingCard = document.getElementById('remaining-card')
+const compImg = document.querySelector('.card-img-comp')
+const userImg = document.querySelector('.card-img-user')
+const compScore = document.getElementById('computer-score')
+const userScore = document.getElementById('user-score')
 
 let deckId;
 
@@ -37,6 +37,11 @@ function drawCardFromDeck() {
             img1.setAttribute('src',img1Src)
             const img2 = document.createElement('img')
             img2.setAttribute('src',img2Src)
+
+            compImg.innerHTML = ''
+            userImg.innerHTML = ''
+            compImg.append(img1)
+            userImg.append(img2)
 
         })
 
