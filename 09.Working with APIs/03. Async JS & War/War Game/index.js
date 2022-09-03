@@ -2,8 +2,6 @@ const Newurl = "https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/"
 const newDeckBtn = document.getElementById('new-deck')
 const drawCardBtn = document.getElementById('draw-card')
 let remainingCard = document.getElementById('remaining-card')
-// const compImg = document.querySelector('.card-img-comp')
-// const userImg = document.querySelector('.card-img-user')
 const compScoreEl = document.getElementById('computer-score')
 const userScoreEl = document.getElementById('user-score')
 let compScore = 0
@@ -19,7 +17,6 @@ function gameStarts(){
     userScore= 0
     userScoreEl.textContent = userScore
     compScoreEl.textContent = compScore
-
     heading.textContent = "War!"
     heading.style.textShadow = "none"
 }
@@ -42,14 +39,12 @@ function gameEnds(){
     }
 
     heading.style.textShadow = '0 0 20px white'
-
 }
 
 // getting the initial deck of card 
 function getNewDeck() {
 
     gameStarts()
-
     fetch(Newurl)
         .then(res => res.json())
         .then(data => {
@@ -96,8 +91,6 @@ function checkScore(card1,card2){
 
     let card1Value = valueOptions.indexOf(card1.value)
     let card2Value = valueOptions.indexOf(card2.value)
-    
-    
 
     if(card1Value > card2Value){
         compScore++
