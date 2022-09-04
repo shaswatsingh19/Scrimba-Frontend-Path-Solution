@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <title>Color Scheme Generator</title>
 
 </head>
+
 <body>
     <div id="container">
         <h1>Get Colors</h1>
@@ -15,12 +17,15 @@
         <div id="scheme-container">
             <div id="color-setting">
                 <input type="color" name="color-picker" id="color-picker">
-                <select id="scheme">
-                    <option>Monochrome</option>
-                    <option>Monochrome</option>
-                    <option>Monochrome</option>
-                    <option>Monochrome</option>
-                    <option>Monochrome</option>
+                <select id="scheme">  
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark ">Monochrome-dark</option>
+                    <option value="monochrome-light">Mmonochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="complement">Complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
                 </select>
                 <button id="color-scheme-btn">Get color scheme</button>
                 <img src="images/sun.png" id="icon" alt="dark and light mode">
@@ -29,33 +34,39 @@
             <div id="color-palette">
                 <div class="color color1">
                     <div class="color-fill"></div>
-                    <div class="color-text">#F55A5A</div>
+                    <div class="color-text">#000000</div>
                 </div>
                 <div class="color color2">
                     <div class="color-fill"></div>
-                    <div class="color-text">#F55A5A</div>
+                    <div class="color-text">#000000</div>
                 </div>
                 <div class="color color3">
                     <div class="color-fill"></div>
-                    <div class="color-text">#F55A5A</div>
+                    <div class="color-text">#000000</div>
                 </div>
                 <div class="color color4">
                     <div class="color-fill"></div>
-                    <div class="color-text">#F55A5A</div>
+                    <div class="color-text">#000000</div>
                 </div>
                 <div class="color color5">
                     <div class="color-fill"></div>
-                    <div class="color-text">#F55A5A</div>
+                    <div class="color-text">#000000</div>
                 </div>
-                
+
             </div>
         </div>
+        
+                <div id="popup" hidden>
+                    <h2>Copied</h2>
+                </div>
+
 
     </div>
 
 
-    
+
 
     <script src="index.js"></script>
 </body>
+
 </html>

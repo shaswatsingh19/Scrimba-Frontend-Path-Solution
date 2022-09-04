@@ -1,39 +1,43 @@
-*{
+* {
     box-sizing: border-box;
 }
-:root{
-    --bg-color :#000;
-    --text-color:#fff;
-    --icon-bg:#626262;
-    --main-bg:#1F2937;
+
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --icon-bg: #626262;
+    --main-bg: #1F2937;
 
 }
-.light{
-    --bg-color :#fff;
-    --text-color:#000;
+
+.light {
+    --bg-color: #fff;
+    --text-color: #000;
     --icon-bg: #000000;
-    --main-bg:#fff;
+    --main-bg: #fff;
 }
 
-body{
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    animation: start .4s ease-in ;
+    animation: start .4s ease-in;
 }
+
 @keyframes start {
-    0%{
+    0% {
         transform: scale(.95);
 
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
-    
+
 }
 
-#scheme-container{
+#scheme-container {
     border: 2px solid var(--text-color);
     width: 95%;
     background-color: var(--main-bg);
@@ -45,12 +49,13 @@ body{
     transition: background-color .8s, box-shadow .8s;
 }
 
-#color-setting{
+#color-setting {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#color-picker{    
+
+#color-picker{
     border: none;
     outline: none;
     max-width: 100%;
@@ -58,95 +63,158 @@ body{
 }
 
 #color-picker::-webkit-color-swatch-wrapper {
-    padding:2px 0px;    
+    padding: 2px 0px;
 }
 
-button,select{
+button,
+select {
     background-color: var(--bg-color);
     color: var(--text-color);
     border: 1px solid var(--icon-bg);
     padding: 7px 10px;
     border-radius: 5px;
 }
-select{
+button{
+    transition: all .51s;
+}
+button:active{
+    transform: scale(.96);
+}
+select {
     width: 45%;
     padding: 6px 9px;
 }
-#icon{
+
+#icon {
     width: 100%;
     max-width: 35px;
     border: 1px solid var(--text-color);
     border-radius: 50%;
-    padding:6px;
-    background-color:var(--bg-color);
+    padding: 6px;
+    background-color: var(--bg-color);
     transition: all .8s;
 }
-#icon:hover{
+
+#icon:hover {
     cursor: pointer;
 }
-
-
-#color-palette{
-    display: flex;
-    margin: 30px auto 0;
-    
+#icon:active{
+    transform: scale(.85);
 }
-.color{
+
+
+#color-palette {
+    display: flex;
+    margin: 1.1rem auto 0;
+
+}
+
+.color {
     text-align: center;
     width: 20%;
+    cursor: pointer;
 }
-.color-fill{
+.color-fill {
+    transition: transform .8s;
     min-height: 350px;
     /* border: 1px solid; */
 }
-.color-text{
+.color .color-fill:active{
+    transform: scale(.95);
+}
+
+.color-text {
     padding: 5px;
     text-align: center;
 }
-.color1 .color-fill{
-    background-color: red;
-}
-.color2 .color-fill{
-    background-color: rgb(0, 255, 123);
-}
-.color3 .color-fill{
-    background-color: red;
-}
-.color4 .color-fill{
-    background-color: rgb(0, 255, 123);
-}
-.color5 .color-fill{
-    background-color: red;
+
+.color-fill
+{
+    background-color: #000000;
+    margin: 0 3px;
 }
 
-@media screen and (max-width:480px) {
+#popup{
+    z-index: 10;
+    position: absolute;
+    top:4%;
+    right: 5%;
+    border: 1px solid;
+    background-color: var(--icon-bg);
+    border-radius: 5px;
+    animation: show 1.2s ease-out;
+    box-shadow: 0 0 10px var(--text-color);
+    /* display: none; */
+    
+}
+@keyframes show {
+    0%{
+        transform: scale(.8);
+        background-color: var(--text-color);
+        /* display: block; */
 
-    body{
+    }
+    100%{
+        transform: scale(1);
+        background-color: var(--bg-color);
+        
+    }
+
+    
+}
+h2{
+    margin: 5px;
+}
+
+@media screen and (max-width:500px) {
+
+    body {
         font-size: 0.8rem;
     }
-    #color-setting{
+    #popup{
+        top:60%;
+        padding: 20px;
+        right: 38vw;
+    }
+    #color-setting {
         flex-direction: column;
         justify-content: space-around;
         align-items: unset;
-        position:relative;
+        position: relative;
     }
-    input[type='color']{
+    input[type='color'] {
         margin-top: 15px;
     }
-    input,select,button,#icon{
+
+    input,
+    select,
+    button,
+    #icon {
         margin: 10px;
     }
-    select,button{
-        padding: 12px ;
+
+    select,
+    button {
+        padding: 12px;
     }
-    #icon{
+    
+    select{
+        width: unset;
+    }
+
+    #icon {
         position: absolute;
         top: 0;
         right: 0;
     }
-    .color-text{
+
+    .color-text {
         transform: rotate(-90deg) translateX(100%);
-        text-shadow: -1px 1px 1px var(--bg-color);
         letter-spacing: 2px;
+        color: white;
+    }
+
+    .color .color-text:active{
+        transform:scale(0);
     }
 }
