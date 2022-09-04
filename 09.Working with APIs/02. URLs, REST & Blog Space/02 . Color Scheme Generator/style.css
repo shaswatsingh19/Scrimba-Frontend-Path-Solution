@@ -1,5 +1,4 @@
 *{
-    margin: 0;
     box-sizing: border-box;
 }
 :root{
@@ -26,7 +25,7 @@ body{
     border: 2px solid var(--text-color);
     width: 95%;
     background-color: var(--main-bg);
-    margin: 40px auto;
+    margin: 25px auto;
     max-width: 500px;
     border-radius: 10px;
     padding: 15px;
@@ -37,22 +36,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
 }
 #color-picker{    
     border: none;
     outline: none;
     max-width: 100%;
-    border-radius: 5px;    
+    background-color: var(--text-color);
 }
 
 #color-picker::-webkit-color-swatch-wrapper {
-    padding: 2px 0px; 
+    padding:2px 0px;    
 }
 
 #icon{
     width: 100%;
-    max-width: 28px;
+    max-width: 35px;
     border: 1px solid var(--text-color);
     border-radius: 50%;
     padding: 4px;
@@ -63,6 +61,84 @@ button,select{
     background-color: var(--bg-color);
     color: var(--text-color);
     border: 1px solid var(--icon-bg);
-    padding: 5px 8px;
+    padding: 7px 10px;
     border-radius: 5px;
+}
+
+/* 
+<div id="color-palatte">
+    <div class="color color1">
+        <div class="color-fill"></div>
+        <div class="color-text">#F55A5A</div>
+    </div>
+    <div class="color color2">
+        <div class="color-fill"></div>
+        <div class="color-text">#F55A5A</div>
+    </div>               
+</div>
+ */
+
+#color-palette{
+    display: flex;
+    margin: 30px auto 0;
+    
+}
+.color{
+    text-align: center;
+    width: 20%;
+}
+.color-fill{
+    min-height: 350px;
+    /* border: 1px solid; */
+}
+.color-text{
+    padding: 5px;
+    text-align: center;
+}
+.color1 .color-fill{
+    background-color: red;
+}
+.color2 .color-fill{
+    background-color: rgb(0, 255, 123);
+}
+.color3 .color-fill{
+    background-color: red;
+}
+.color4 .color-fill{
+    background-color: rgb(0, 255, 123);
+}
+.color5 .color-fill{
+    background-color: red;
+}
+
+@media screen and (max-width:700px) {
+
+    body{
+        font-size: 0.8rem;
+    }
+    #color-setting{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: unset;
+        position:relative;
+    }
+    input[type='color']{
+        margin-top: 15px;
+    }
+    input,select,button,#icon{
+        margin: 10px;
+    }
+    select,button{
+        padding: 12px ;
+    }
+    #icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .color-text{
+        transform: rotate(-90deg) translateX(100%);
+        text-shadow: -1px 1px 1px var(--bg-color);
+        letter-spacing: 2px;
+    }
 }
