@@ -20,7 +20,19 @@ body{
     color: var(--text-color);
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: start .4s ease-in ;
 }
+@keyframes start {
+    0%{
+        transform: scale(.95);
+
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
 #scheme-container{
     border: 2px solid var(--text-color);
     width: 95%;
@@ -30,6 +42,7 @@ body{
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 0 20px var(--text-color);
+    transition: background-color .8s, box-shadow .8s;
 }
 
 #color-setting{
@@ -48,15 +61,6 @@ body{
     padding:2px 0px;    
 }
 
-#icon{
-    width: 100%;
-    max-width: 35px;
-    border: 1px solid var(--text-color);
-    border-radius: 50%;
-    padding: 4px;
-    background-color:var(--icon-bg)
-}
-
 button,select{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -64,19 +68,23 @@ button,select{
     padding: 7px 10px;
     border-radius: 5px;
 }
+select{
+    width: 45%;
+    padding: 6px 9px;
+}
+#icon{
+    width: 100%;
+    max-width: 35px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    padding:6px;
+    background-color:var(--bg-color);
+    transition: all .8s;
+}
+#icon:hover{
+    cursor: pointer;
+}
 
-/* 
-<div id="color-palatte">
-    <div class="color color1">
-        <div class="color-fill"></div>
-        <div class="color-text">#F55A5A</div>
-    </div>
-    <div class="color color2">
-        <div class="color-fill"></div>
-        <div class="color-text">#F55A5A</div>
-    </div>               
-</div>
- */
 
 #color-palette{
     display: flex;
@@ -111,7 +119,7 @@ button,select{
     background-color: red;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:480px) {
 
     body{
         font-size: 0.8rem;
