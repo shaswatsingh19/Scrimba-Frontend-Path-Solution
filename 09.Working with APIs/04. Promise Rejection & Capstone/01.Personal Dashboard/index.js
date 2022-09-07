@@ -1,9 +1,35 @@
 const cryptoContainer = document.getElementById('crypto-container')
 const weatherContainer = document.getElementById('weather-container')
 const timeContainer  = document.querySelector('#main')
-
+const authorContainer = document.getElementById('author')
 // ------------------ Unsplash API ----------------------
 
+const unsplashApi = "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
+
+fetch(unsplashApi)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+
+        document.body.style.backgroundImage =  `url(${data.urls.small})`  
+
+        authorContainer.innerHTML =  `   
+            <p>Created By: ${data.user.name}</p>
+        `  
+        console.log(data.urls.regular)
+    })
+    .catch(err => {
+        
+        console.log(err)
+        const defaultImg = 'https://images.unsplash.com/photo-1493130952181-47e36589f64d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI1NjA0ODY&ixlib=rb-1.2.1&q=80&w=1080%20%20%20%20%20%20%20%20%20%C5%81ukasz%20%C5%81ada'
+        const defaultName = 'Łukasz Łada'
+
+        document.body.style.backgroundImage =  `url(${defaultImg})`  
+        authorContainer.innerHTML =  `   
+            <p>Created By: ${defaultName}</p>
+        `  
+
+    })
 
 
 // -------------------- Crpyto API --------------------
@@ -11,14 +37,16 @@ const timeContainer  = document.querySelector('#main')
 const apiCryptoUrl = 'https://api.coingecko.com/api/v3/coins/bitcoin'
 
 fetch(apiCryptoUrl)
-    .then(res => res.json())
+    .then(res => {
+        if(!res.ok){
+            throw err
+        }
+        return res.json()
+    })
     .then(data => {
         console.log(data)
 
-        const coin = document.createElement('div')
-        coin.classList.add('coin')
-
-        coin.innerHTML =  `  
+        cryptoContainer.innerHTML =  `  
             <div class="coin-header">
                 <img src="${data.image.small}" alt="${data.name} Image" >
                 <p class="coin-title">${data.name}</p>
@@ -29,8 +57,22 @@ fetch(apiCryptoUrl)
                 <p>👇: ₹${data['market_data']['low_24h']['inr']}</p>
             </div>
             ` 
-        cryptoContainer.append(coin)
     })
+    .catch((Error) => {
+        console.log(Error)
+        cryptoContainer.innerHTML =  `  
+        <div class="coin-header">
+        <img src="${"image"}" alt="${"No Coin"} Image" >
+        <p class="coin-title">No Coin</p>
+        </div>
+        <div class="coin-info">
+        <p>🎯: ₹ N/A</p>
+        <p>👆: ₹ N/A</p>
+        <p>👇: ₹ N/A</p>
+        </div>
+        ` 
+        }
+    )
 
 
 // ------------------ Weather API ----------------------
