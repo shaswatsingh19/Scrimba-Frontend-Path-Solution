@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+#container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid red;
+    padding: 10px;
+    
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#main{
+    text-align: center;
+}
+
+
+.coin-header{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.coin-title{
+    font-size: 1.4rem;
+    margin-left:5px;
+}
+.coin-info{
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+
+#weather-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid pink; */
+    align-items: center;
+    justify-content: flex-end;
+}
+img{
+    border: 1px solid magenta;
+    padding: 0;
+}
+.weather{
+    font-size: 1.4rem;
+    margin-top:-15px;
+    border: 1px solid salmon;
+}
+.location{
+    border: 1px solid red;
+    width: 100%;
+    text-align: end;
+    margin-top: -100px;
+    margin-right: 10px;
+    font-size: 1.4rem;
+    
+}

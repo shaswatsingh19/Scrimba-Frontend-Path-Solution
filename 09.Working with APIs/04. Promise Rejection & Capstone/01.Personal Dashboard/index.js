@@ -19,7 +19,7 @@ fetch(unsplashApi)
         console.log(data.urls.regular)
     })
     .catch(err => {
-        
+
         console.log(err)
         const defaultImg = 'https://images.unsplash.com/photo-1493130952181-47e36589f64d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjI1NjA0ODY&ixlib=rb-1.2.1&q=80&w=1080%20%20%20%20%20%20%20%20%20%C5%81ukasz%20%C5%81ada'
         const defaultName = 'Łukasz Łada'
