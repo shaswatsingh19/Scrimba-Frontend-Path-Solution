@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     background-color: #121212;
     color:#fff ;
-    height: 100vh;
+    min-height: 100vh;
 }
 a{
     text-decoration: none;
@@ -24,12 +24,12 @@ header{
     background:url('images/movie-poster.jpg') no-repeat ;
     background-size: cover;
     background-position: left;
-    height: 25vh;
+    height: 40vh;
     padding: 40px 3rem;
     align-items: center;
     background-color:  #121212;
     background-blend-mode:soft-light;
-    margin-bottom: -2vh;
+    margin-bottom: -3vh;
 }
 header h1{
     font-size: 3rem;
@@ -44,6 +44,7 @@ header a{
     display: flex;
     justify-content: center;
     height: 40px;
+    
     
 }
 svg{
@@ -79,8 +80,7 @@ svg{
     transition: all .4s ease-out;
 
 }
-#search-btn:focus{
-}
+
 #search-btn:active{
     transform:scale(.98)
 }
@@ -91,7 +91,10 @@ svg{
     position: absolute;
     top:50vh;
     left: 45%;
-    
+    /* margin-top: 18vh;
+    margin-bottom: -18vh;
+    */
+    z-index: -4;
 }
 
 #exploring-icon svg{
@@ -102,11 +105,13 @@ svg{
 #unable-icon,#empty-icon{
     
     color: #787878;
-    position: absolute;
+    /* position: absolute;
     top:60vh;
-    left: 35%;
+    left: 35%; */
     text-align: center;
     /* display: none; */
+    margin-top: 18vh;
+
 }
 
 #add-from-watchlist{
@@ -120,6 +125,70 @@ svg{
     height: 30px;
     
 }
+
+
+#movie-container{
+    margin: 4rem;
+    padding: 1rem 2rem;
+
+}
+
+.movie{
+    display: flex;
+    align-items: flex-start;
+    
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+.movie-poster img{
+    width: 100%;
+    max-width: 200px;
+}
+.movie-poster{
+    /* width: 30%; */
+    margin: 0 20px;
+    /* margin-right: /10px; */
+}
+.movie-info{
+    width: 70%;
+}
+.heading-rating{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.heading-rating h2{
+    margin-right: 10px;
+}
+.rating{
+    margin:0 10px;
+    display: flex;
+
+}
+.rating p{
+    margin: 0 2px;
+}
+#add-to-watchlist:hover{
+    cursor: pointer;
+}
+.details{
+    display: flex;
+    /* justify-content:space-between; */
+    font-size: larger;
+
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.details p{
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.description p{
+    font-size: larger;
+}
+
 
 @media screen and (max-width:500px) {
     
@@ -138,4 +207,38 @@ svg{
     /* #input-container{
         flex-direction: column;
     } */
+
+    .details{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+    .details >p {
+        margin-bottom: 5px;
+    }
+    .description p{
+        font-size: medium;
+    }
+    
+    .movie{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .movie-info{
+        margin: 0 auto;
+        width: 100%;
+        
+    }
+    .movie-poster img{
+        width: 100%;
+        max-width: 320px;
+    }
+    .movie-poster{
+        /* margin: 0 auto; */
+        width: 70%;
+        margin-left: 0;
+        margin-bottom: 15px;
+        
+    }
+    
 }
+
