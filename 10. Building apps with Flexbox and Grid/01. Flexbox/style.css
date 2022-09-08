@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Blinker', sans-serif;
+
+    font-size: 30px;
+}
+
+#container{
+    display: flex;
+    min-height: 100vh;
+}
+#image{
+    background-image: url('images/tech.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-basis: 40%;
+
+}
+
+#details{
+    width: 60%;    
+    background-color: #111d4a;
+    padding: 1.42em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+h1{
+    color: #05cbe9;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+p{
+    color: #fff;
+    margin: 20px auto;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+#extra{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+h2{
+    color: rgb(132, 133, 134);
+    font-size: 30px;
+    width: 0px;
+}
+a{
+    text-decoration: none;
+    background-color: #05cbe9;
+    padding: 18px 30px;
+    color: #111d4a;
+}
+
+@media screen and (max-width:600px) {
+    #container{
+        flex-direction: column;
+    }
+
+    #image{
+        
+        min-height: 40vh; 
+    }
+    #details{
+        width: 100%;
+        min-height: 60vh;
+
+    }
+
+
+}
