@@ -11,7 +11,7 @@ fetch(unsplashApi)
     .then(data => {
         console.log(data)
 
-        document.body.style.backgroundImage =  `url(${data.urls.small})`  
+        document.body.style.backgroundImage =  `url(${data.urls.regular})`  
 
         authorContainer.innerHTML =  `   
             <p>Created By: ${data.user.name}</p>
@@ -61,15 +61,15 @@ fetch(apiCryptoUrl)
     .catch((Error) => {
         console.log(Error)
         cryptoContainer.innerHTML =  `  
-        <div class="coin-header">
-        <img src="${"image"}" alt="${"No Coin"} Image" >
-        <p class="coin-title">No Coin</p>
-        </div>
-        <div class="coin-info">
-        <p>🎯: ₹ N/A</p>
-        <p>👆: ₹ N/A</p>
-        <p>👇: ₹ N/A</p>
-        </div>
+            <div class="coin-header">
+            <img src="${"image"}" alt="${"No Coin"} Image" >
+            <p class="coin-title">No Coin</p>
+            </div>
+            <div class="coin-info">
+            <p>🎯: ₹ N/A</p>
+            <p>👆: ₹ N/A</p>
+            <p>👇: ₹ N/A</p>
+            </div>
         ` 
         }
     )
@@ -85,17 +85,24 @@ navigator.geolocation.getCurrentPosition((position) => {
     fetch(weatherApiUrl)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
-
+            
             const imgValue = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-
-
             weatherContainer.innerHTML = `
                 <img src="${imgValue}" alt="${data.weather[0].main} image">
                 <p class="weather">${data.main.temp}<sup>o</sup></p>
                 <p class="location">${data.name}</p>
             `
-        })  
+        })
+        .catch((err) => {
+            console.log(err)
+            const imgValue = `http://openweathermap.org/img/wn/01d@2x.png`
+            weatherContainer.innerHTML = `
+                <img src="${imgValue}" alt="No image">
+                <p class="weather">NA</p>
+                <p class="location">something went wrong</p>
+            `
+        })
+        
 })
 
 
