@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;   
+    
+    
+}
+.items{
+    /* font-size: larger;
+    text-shadow: 1px 1px 1px white; */
+    height: 10%;
+    width: 10%;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
