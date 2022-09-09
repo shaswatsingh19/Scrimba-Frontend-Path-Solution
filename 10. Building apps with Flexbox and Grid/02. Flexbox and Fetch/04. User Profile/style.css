@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+
+}
+
+/* <div class='profile-header'>
+    <div>Name: ${data.name}</div>
+    <div>Username: ${data.username}</div>
+</div>
+<div class='company'>
+    <div>👩🏽‍💼${data.company.name}</div>
+    <div>${data.company.catchPhrase}</div>
+    <div>${data.company.bs}</div>
+</div>
+
+<div class='contact'>
+    <div>📧${data.email}</div>
+    <div>📞${data.phone}</div>
+    <div>💻${data.website}</div>
+</div>
+<div class='address'>
+    <div>${data.address.street}, ${data.address.suite}</div>
+    <div>${data.address.city} ${data.address.zipcode}</div>
+</div>
+` */
+#container{
+    font-size: 2rem;
+    background-color: rgb(255, 0, 247);
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.profile-header{
+    height: 20vh;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+.company{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    height: 30vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2rem;
+
+}
+.contact{
+    background-color: rgb(84, 84, 173);
+    text-align: center;
+    padding: 1rem 2rem;
+    height: 30vh;
+    justify-content: center;
+
+
+}
+.address{
+    height: 10vh;
+    
+    display: flex;
+    background-color: rgb(131, 173, 84);
+    padding: 1rem 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
