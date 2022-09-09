@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(82, 60, 60);
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img{
+    border: 0.1rem white solid;
+    border-radius: .7rem;
+    margin: .5rem;
+    
+    
+}
