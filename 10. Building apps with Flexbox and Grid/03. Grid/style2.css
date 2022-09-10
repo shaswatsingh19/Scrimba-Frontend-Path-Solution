@@ -1,0 +1,56 @@
+.grid {
+    display: grid;
+    /* grid-template-columns: 100px 200px 200px 150px ; */
+    grid-template-columns: 100px  150px minmax(150px,100%) 150px ;
+    /* using minmax(min,max) we can signifies the min and max value for the column or row */
+    /* here we use min as 150px and max can be 100% of the parent  */
+    grid-template-areas: 
+      "header header header  header" 
+      "...... sidebar content content"
+      "footer footer footer footer";
+      /* we can add as many . to make it visible good */
+  }
+
+  /* responsiveness with grid area is easy and simple */
+  @media screen and (max-width:600px) {
+    .grid{
+        grid-template-columns:1em auto 1em;
+        grid-template-areas: 
+        "header header header" 
+        ".... sidebar.... "
+        ".... content.... "
+        "footer footer footer";
+
+    }
+  }
+  
+  .header {
+    grid-area: header;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+  }
+  
+  .big {
+    grid-area: content;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+  
+  .grid-item {
+    background: #B823C1;
+    color: white;
+    padding: 1em 2em;
+    border: 2px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .big {
+      padding: 3em 2em;
+      background: #FF5670;
+  }
