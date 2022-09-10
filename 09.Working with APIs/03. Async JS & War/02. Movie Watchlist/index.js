@@ -74,7 +74,7 @@ function findMoviesFromId(arrFetched){
     
     arrId.forEach(id => {
     
-        const SearchMovieUrl  = `https://www.omdbapi.com/?apikey=4948befc&r&i=${id}`
+        const SearchMovieUrl  = `https://www.omdbapi.com/?apikey={key}&r&i=${id}`
         console.log(SearchMovieUrl)
 
         fetchingEachMovie(SearchMovieUrl)
@@ -92,7 +92,7 @@ searchBtn.addEventListener('click',function(){
     
     console.log(inputData.value)
     searchKeyword = inputData.value
-    const apiUrlFromKeyword =  `https://www.omdbapi.com/?apikey=4948befc&s=${searchKeyword}`
+    const apiUrlFromKeyword =  `https://www.omdbapi.com/?apikey={key}&s=${searchKeyword}`
 
     console.log(apiUrlFromKeyword)
 
