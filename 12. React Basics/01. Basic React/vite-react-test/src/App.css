@@ -1,0 +1,52 @@
+#container{
+  border: 5px solid cadetblue;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 20px grey;
+  /* height: 80vh; */
+  position: relative;
+  
+}
+nav{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px grey;
+  
+  padding: 10px 0;
+}
+.logo{
+  width: 100%;
+  max-width: 80px;
+}
+.nav-list{
+  display: flex;
+}
+
+.nav-list li{
+  margin-right: 20px;
+  font-size: 1.5rem;
+  list-style-type: none;
+  
+}
+main{
+  margin-bottom: 40px;
+}
+
+.nav-list li:hover{
+  cursor: pointer;
+  border-bottom: 1px solid red;
+}
+
+footer{
+  background-color: grey;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+
+}
