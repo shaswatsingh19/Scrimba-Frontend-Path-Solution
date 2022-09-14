@@ -1,10 +1,24 @@
 #container{
-  border: 5px solid cadetblue;
-  margin: 20px 50px;
+  border: 10px solid #5ac7e1;
+  width: 80%;
+  max-width: 560px;
+  margin: 30px auto;
+  border-radius: 10px;
   box-shadow: 0 0 20px grey;
   color: white;
+  background-color: #272d34;  
+  animation: start .7s ease-in ;
 
-  background-color: #272d34;
+
+}
+
+@keyframes start {
+  0%{
+    transform: scale(.75);
+  }  
+  100%{
+    transform: scale(1);
+  }
   
 }
 nav{
@@ -14,8 +28,12 @@ nav{
   border-bottom: solid 1px grey;
   background-color: #21222b;
   padding: 0 10px;
+  
+    
+  
 }
 .nav-logo{
+  
   display: flex;
   align-items: center;
   color: #5ac7e1;
@@ -24,6 +42,11 @@ nav{
   margin-left: 5px;
   display: inline-block;
 }
+.nav-title{
+  cursor: pointer;
+}
+
+
 
 
 .nav-title::after{
@@ -42,26 +65,29 @@ nav{
 }
 
 
-
 main{
   
-  margin: 10px;
-
+  margin-left: 20px;
+  background-image: url('./assets/react-icon-large.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  
 }
 
 li{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
-  list-style-type: none;
+  list-style-type: none;  
+  padding-left: 10px;
+  margin-left: -10px;
   
 }
-li::before {
+
+
+li::marker{
   content: "\2023";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #5ac7e1; 
-  font-weight: 900; 
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 15px;
-  margin-left: -20px;
+  font-size: 1.8rem;  
 }
 
 
@@ -70,5 +96,4 @@ footer{
   background-color: grey;
   text-align: center;
   padding: 10px; 
-
 }
