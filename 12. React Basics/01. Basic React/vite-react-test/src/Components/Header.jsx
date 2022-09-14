@@ -2,12 +2,13 @@ import logoImg from "../assets/react.svg"
 export default function Header() {
     return (
       <nav>
-        <img className= 'logo' src={logoImg} alt="react logo"></img>
-        <ul className="nav-list">
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <div className='nav-logo'>
+          <img src={logoImg} alt="react logo"></img>
+          <h2>ReactFacts</h2>
+        </div>
+        <div className='nav-title'>
+          <h3>React Course - Project 1</h3>
+        </div>
       </nav>
     );
   }
