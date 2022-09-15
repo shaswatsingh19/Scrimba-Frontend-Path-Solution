@@ -1,0 +1,51 @@
+
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img{
+  width: 100%;
+  max-width: 200px;
+}
+
+header{
+  padding: 10px 20px;
+  box-shadow: 0 1px 5px 0px black;
+}
+#nav-logo{
+  max-width: 15%;
+}
+.hero{
+  padding: 40px;
+}
+#main-img{
+  display: block;
+  margin: auto;
+  width: 700px;
+  max-width: 100%;
+}
+
+.hero h1{
+  margin: 20px auto 10px;
+  font-size: 2rem;
+  
+}
+.hero p{
+  font-size: larger;
+  max-width: 280px;
+}
+
+
+@media screen and (max-width:500px) {
+  
+  .hero h1{
+    font-size: 1.1rem;
+  }
+  .hero p{
+    font-size: smaller;
+  }
+}
