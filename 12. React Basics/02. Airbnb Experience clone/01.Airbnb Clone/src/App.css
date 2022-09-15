@@ -5,19 +5,16 @@
   box-sizing: border-box;
 }
 body{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-img{
-  width: 100%;
-  max-width: 200px;
+  font-family:Poppins, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-header{
+nav{
   padding: 10px 20px;
   box-shadow: 0 1px 5px 0px black;
 }
 #nav-logo{
-  max-width: 15%;
+  width: 100%;
+  max-width: 20%;
 }
 .hero{
   padding: 40px;
@@ -30,20 +27,21 @@ header{
 }
 
 .hero h1{
-  margin: 20px auto 10px;
+  font-weight: 900;
+  margin: 15px auto 5px;
   font-size: 2rem;
   
 }
 .hero p{
   font-size: larger;
-  max-width: 280px;
+  max-width: 320px;
 }
 
 
 @media screen and (max-width:500px) {
   
   .hero h1{
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .hero p{
     font-size: smaller;
