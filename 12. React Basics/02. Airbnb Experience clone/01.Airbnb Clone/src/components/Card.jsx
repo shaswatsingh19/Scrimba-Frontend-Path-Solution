@@ -18,8 +18,7 @@ export default function Card(){
                 <span className='country'>USA</span>  
             </div>
             <p className='title'>Life lesson with Katie Zaferes</p>
-            <p><strong>From</strong> <span class='price'>$136</span> / person</p>
-        
+            <p><strong>From</strong> <span class='price'>$136</span> / person</p> 
         </div>
     )
 } 
