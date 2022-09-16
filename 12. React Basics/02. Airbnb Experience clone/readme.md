@@ -1,2 +1,7 @@
 ## AirBnB Clone
 
+Learning in this module
+
+- Props => Used to create reusable and composable react component
+
+- Creating react components from an array of data

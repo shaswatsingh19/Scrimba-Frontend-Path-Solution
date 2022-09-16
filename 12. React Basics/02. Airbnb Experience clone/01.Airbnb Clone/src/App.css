@@ -1,5 +1,3 @@
-
-
 *{
   margin: 0;
   box-sizing: border-box;
@@ -15,7 +13,7 @@ nav{
 }
 #nav-logo{
   width: 100%;
-  max-width: 20%;
+  max-width: 10%;
 }
 
 /* -------------------- Hero */
@@ -40,7 +38,45 @@ nav{
   max-width: 320px;
 }
 
-/* -------------------- Main */
+/* -------------------- Card */
+
+.card{
+  
+  display:inline-block;
+  padding: 10px 30px;
+}
+.card-img{
+  position: relative;
+}
+.card-img img{
+  border-radius: 16px;
+}
+.availablity{
+  padding: 3px 5px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top:5px;
+  left: 10px;
+
+}
+.rating{
+  display: flex;
+  align-items: center;
+}
+.rating span{
+  margin-left: 7px;
+}
+.rated-by, .country{
+  color: rgb(175, 176, 176);
+}
+.card p{
+  margin-top: 5px;
+}
+.price{
+  font-weight: 900;
+}
 
 
 @media screen and (max-width:500px) {
