@@ -7,7 +7,7 @@ export default function Card(props){
         <div className='card'>
             <div className="card-img">
                 <img src={`src/assets/${props.img}`} alt='user images'></img>
-                <p className="availablity">Sold Out</p>
+                <p className="availablity">{props.isAvailable}</p>
             </div>
         
             <div className='rating'>
