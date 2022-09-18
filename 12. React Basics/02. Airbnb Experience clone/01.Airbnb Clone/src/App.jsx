@@ -4,14 +4,15 @@ import Hero from './components/hero'
 import Card from './components/card'
 import DataArr from './data'
 
-console.log(DataArr)
 
 function App() {
 
-  const DataComp = DataArr.map(data =>{
+  const cards = DataArr.map(data =>{
     return (
       // calling Card Component
       <Card 
+          // key is important while using map() method
+          key = {data.id}
           img= {data.coverImg}
           rating={data.stats.rating}
           reviewCount={data.stats.reviewCount}
@@ -23,12 +24,13 @@ function App() {
     )
   })
   
-  console.log(DataComp)
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      {DataComp}
+      <section className='cards-list'>
+        {cards}
+      </section>
     </div>
   )
 }

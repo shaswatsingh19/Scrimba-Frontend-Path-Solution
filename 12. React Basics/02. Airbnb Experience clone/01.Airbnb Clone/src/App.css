@@ -43,15 +43,24 @@ nav{
 .card{
   
   display:inline-block;
-  padding: 10px 30px;
+  padding: 10px;
 }
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+}
+
 .card-img{
   position: relative;
+  
+  width: 250px;
 }
 .card-img img{
   border-radius: 16px;
-  width: 280px;
   max-width: 100%;
+  
 }
 .availablity{
   padding: 3px 5px;
