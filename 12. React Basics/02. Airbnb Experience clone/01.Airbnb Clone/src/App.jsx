@@ -13,13 +13,13 @@ function App() {
       <Card 
           // key is important while using map() method
           key = {data.id}
-          img= {data.coverImg}
-          rating={data.stats.rating}
-          reviewCount={data.stats.reviewCount}
-          location= {data.location}
-          title={data.title}
-          price={data.price}
-          openSpots = {data.openSpots}
+          // put the the property into a single object
+          item = {data}
+          /*
+          can also do like this too to send property to component 
+          which create a single object each time it render
+          {...data}
+           */
       />
     )
   })
