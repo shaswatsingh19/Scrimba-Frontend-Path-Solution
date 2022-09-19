@@ -16,10 +16,10 @@ function App() {
           img= {data.coverImg}
           rating={data.stats.rating}
           reviewCount={data.stats.reviewCount}
-          country= {data.location}
+          location= {data.location}
           title={data.title}
           price={data.price}
-          isAvailable = {data.openSpots ? `${data.openSpots} spots Left` : 'Sold Out'}
+          openSpots = {data.openSpots}
       />
     )
   })
