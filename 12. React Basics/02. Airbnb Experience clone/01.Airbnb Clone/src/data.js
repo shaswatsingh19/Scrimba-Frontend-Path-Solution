@@ -4,7 +4,7 @@ export default [
         title: "Life Lessons with Katie Zaferes",
         description: "I will share with you what I call \"Positively Impactful Moments of Disappointment.\" Throughout my career, many of my highest moments only came after setbacks and losses. But learning from those difficult moments is what gave me the ability to rise above them and reach my goals.",
         price: 136,
-        coverImg: "katie-zaferes.png",
+        coverImg: "https://i.pinimg.com/736x/47/2b/61/472b61d49bb2c847bb7e0665497af47e.jpg",
         stats: {
             rating: 5.0,
             reviewCount: 6
