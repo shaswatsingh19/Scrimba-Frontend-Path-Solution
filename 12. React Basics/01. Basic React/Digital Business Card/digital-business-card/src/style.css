@@ -5,7 +5,7 @@
 
 #container{
     max-width: 400px;
-    background-color: #1A1B21;
+    background-color: #333542;
     margin: 30px auto;
     border-radius: 10px;
     color: white;
@@ -17,9 +17,9 @@ header{
 }
 header p{
     margin: 2px auto;
-    text-decoration: underline wavy rgb(114, 111, 111);
+    text-decoration: underline wavy rgb(214, 213, 215);
 }
-a{
+header a{
     color: white;
     text-decoration: none;
     margin: 10px auto;
@@ -54,3 +54,14 @@ img{
 /* ---------------------------- Main  */
 
 
+
+/* ----------------------------- Footer */
+
+footer{
+    background-color: #232323;
+    /* background-color: #0808fd; */
+    padding: 12px 0 12px ;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0 0 10px 10px;
+}
