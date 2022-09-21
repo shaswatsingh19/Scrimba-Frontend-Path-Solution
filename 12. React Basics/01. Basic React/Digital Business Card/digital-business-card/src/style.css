@@ -9,8 +9,17 @@
     margin: 30px auto;
     border-radius: 10px;
     color: white;
+    animation: start .7s ease-in-out;
 }
 
+@keyframes start{
+    0%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 header{
     
     text-align: center;
@@ -34,18 +43,21 @@ header a{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 8px;
     border-radius: 10px;
     max-width: 100%;
-    width: 280px;
+    color: black;
+    transition: all .7s;
     
 }
 #email span{
     margin-left: 5px;
-    color: black;
     
 }
 
+#email:hover{
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
 img{
 
 }
@@ -53,15 +65,32 @@ img{
 
 /* ---------------------------- Main  */
 
+main{
+    padding: 20px;
+    padding-top: 0;
+}
 
+.main-div h3{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
 
 /* ----------------------------- Footer */
+.footer-section{
 
-footer{
     background-color: #232323;
-    /* background-color: #0808fd; */
-    padding: 12px 0 12px ;
     display: flex;
     justify-content: space-evenly;
-    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+    border-radius:0 0 10px 10px;
+}
+footer{
+    transition: all .7s;
+
+}
+footer:hover{
+
+    box-shadow: 0 0 10px  white;
 }
