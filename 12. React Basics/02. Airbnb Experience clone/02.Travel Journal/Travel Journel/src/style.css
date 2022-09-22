@@ -1,3 +1,23 @@
-body{
-    background-color: red;
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    border: 1px solid red;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #F55A5A;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav h3{
+    margin-left: 5px;
+    font-size: 1.4rem;
 }
