@@ -6,9 +6,9 @@
 
 #container{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: 1px solid red;
     max-width: 600px;
     margin: 0 auto;
+    width: 95%;
 }
 
 nav{
@@ -23,8 +23,68 @@ nav h3{
     margin-left: 5px;
     font-size: 1.4rem;
 }
+.img-section{
 
+    width: 25%;
+}
 img{
-    width: 200px;
+    height: 100%;
+    object-fit: cover;
     max-width: 100%;
+    border-radius: 15px;
+}
+.margin-btm{
+    margin-bottom: 8px;
+}
+
+/* -------------------------- MAIN */
+
+.main{
+    display: flex;
+    margin: 0 15px;
+    padding:15px 0;
+    border-bottom: 1px solid rgb(232, 228, 228);
+}
+.main:last-of-type{
+    border-bottom: none;
+}
+
+.details{
+    width: 70%;
+    margin-left: 15px;
+    padding: 10px 0;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.location p{
+    margin-left: 8px;
+}
+
+.details a{
+    
+    color: rgb(187, 187, 187);
+    margin-left: 15px;
+    font-size: small;
+}
+
+
+
+@media screen and (max-width:400px) {
+
+    .img-section{
+
+        width: 40%;
+    }
+    
+    .details{
+        width: 50%;
+    }
+    .location svg{
+        margin-left: 15px;
+    }
+    
 }
