@@ -3,7 +3,9 @@
     box-sizing: border-box;
 }
 
+
 #container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: 1px solid red;
     max-width: 600px;
     margin: 0 auto;
@@ -20,4 +22,9 @@ nav{
 nav h3{
     margin-left: 5px;
     font-size: 1.4rem;
+}
+
+img{
+    width: 200px;
+    max-width: 100%;
 }
