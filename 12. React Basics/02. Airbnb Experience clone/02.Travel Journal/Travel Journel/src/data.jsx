@@ -16,7 +16,7 @@ export default [
         googleMapsUrl: "https://goo.gl/maps/kScCBdBcpGj3fV1c8",
         startDate: "21 Mar, 2021",
         endDate: "24 Mar, 2021",
-        description: "The Geirangerfjord is one of Norway's most visited tourist sites and has been included on the UNESCO World Heritage List, along with the Nærøyfjord, since 2005.",
+        description: "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th century architecture.",
         image: "opera_house.jpg"
     },
     {
