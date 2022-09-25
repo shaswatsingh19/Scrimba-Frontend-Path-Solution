@@ -40,7 +40,7 @@ header{
     padding: 20px;
     align-items: center;
 }
-img{
+header img{
     width: 100%;
     max-width: 65px;
     object-fit: cover;
@@ -67,29 +67,45 @@ header button{
 /* ------------------------------------------- Meme Section */
 
 main{
-    padding: 20px;
+    padding: 15px;
 }
-form{
+.form{
     flex-wrap: wrap;
     display: flex;
 }
-form input {
-    margin-bottom: 20px;
+.form input {
+    margin-bottom: 15px;
     width: 47%;
 }
-form input + input{
+.form input + input{
     margin-left: auto;
 }
-form button{
+.form button{
     width: 100%;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
     color: white;
     border: none;
+    cursor: pointer;
 }
-form button , form input{
+.form button:active {
+    transform: scale(.98);
+    background: linear-gradient(90.41deg, #511565 1.14%, #480a5c 100%);
+
+}
+.form button , .form input{
 
     border-radius: 5px;
     font-size: 1.2rem;
     padding: 8px;
 
+}
+
+.form img{
+    margin-top: 15px;
+    border-radius: 10px;
+    max-width: 630px;
+    width: 100%;
+    object-fit: cover;
+    /* height: 59vh; */
+    
 }
