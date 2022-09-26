@@ -34,8 +34,7 @@ export default function Meme(){
                 <input type='text' id='top-text' placeholder='top text' name='top-text'></input>
                 <input type='text' id='bottom-text' placeholder='bottom text' name='bottom-text'></input>
                 <button type="submit" onClick = {getMemeImage}>Get a new meme image 🖼</button>
-
-                <img src={meme.randomImage}alt = 'meme image'></img>
+                <img src={meme.randomImage}alt = 'meme image' />
             </div>
         </main>
     )
