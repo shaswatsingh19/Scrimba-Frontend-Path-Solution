@@ -13,9 +13,8 @@ export default function Meme(){
     const [allMemeData , setAllMemeData ] = React.useState(memesData)
 
 
-
+    // handler for set the new random image
     function getMemeImage(){
-
         const memesArr = allMemeData.data.memes
         const randomInd = Math.floor(Math.random() * memesArr.length)
         const url = memesArr[randomInd].url
