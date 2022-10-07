@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../assets/TrollFace.png'
 
 export default function Header(){
 
@@ -16,7 +17,7 @@ export default function Header(){
 
     return (
         <header>
-            <img src='Troll Face.png' alt='page log' ></img>
+            <img src={logo} alt='page logo' ></img>
             <h1>Meme Generator</h1>
             <button className='icon' onClick={changeTheme}>{theme}</button>
         </header>
