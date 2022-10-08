@@ -1,5 +1,7 @@
 import React from 'react'
-import logo from '../assets/TrollFace.png'
+import logo  from '../assets/TrollFace.png'
+
+
 
 export default function Header(){
 
