@@ -11,18 +11,19 @@ tweetBtn.addEventListener('click',() => {
     }
 })
 
+// Working with like,reply and retweet event
 document.addEventListener('click',(e) => {
     if(e.target.dataset.like){
         handleLikeClicked(e.target.dataset.like)
     }else if(e.target.dataset.reply){
         console.log(e.target.dataset)
     }else if(e.target.dataset.retweet){
+        handleRetweetClicked(e.target.dataset.retweet)
         console.log(e.target.dataset)
     }
 })
 
 function handleLikeClicked(tweetId){
-
     console.log('liked ',tweetId)
     const targetTweetObj = tweetsData.filter(data => {
         if(data.uuid === tweetId){
@@ -31,11 +32,26 @@ function handleLikeClicked(tweetId){
     })[0]
     if(targetTweetObj.isLiked){
         targetTweetObj.likes-=1
-        targetTweetObj.isLiked = false
     }else{
         targetTweetObj.likes+=1
-        targetTweetObj.isLiked = true
     }
+    targetTweetObj.isLiked = !targetTweetObj.isLiked
+    renderFeed() // To render new like count UI
+}
+
+function handleRetweetClicked(tweetId){
+    console.log('retweet ',tweetId)
+    const targetTweetObj = tweetsData.filter(data => {
+        if(data.uuid === tweetId){
+            return data
+        }
+    })[0]
+    if(targetTweetObj.isRetweeted){
+        targetTweetObj.retweets-=1
+    }else{
+        targetTweetObj.retweets+=1
+    }
+    targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted
     renderFeed() // To render new like count UI
 }
 
